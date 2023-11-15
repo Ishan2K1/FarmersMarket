@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FarmersMarket</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_add_event">add_event</string>
+    <string name="title_return">Return</string>
+    <string name="title_profile">Profile</string>
+    <string name="title">title_return</string>
+
+    <array name="Meats">
+        <item>Meats</item>
+        <item>Chicken | $5/lb</item>
+        <item>Beef | $3/lb</item>
+        <item>Lamb | $3/lb</item>
+        <item>Ostrich | $10/lb</item>
+        <item>Crocodile | $17/lb</item>
+    </array>
+    <array name="Dairy">
+        <item>Dairy</item>
+        <item>Cow milk | $3/gal</item>
+        <item>Goat milk | $5/gal</item>
+        <item>Goat cheese | $3/lb</item>
+    </array>
+    <array name="Vegetables">
+        <item>Vegetables</item>
+        <item>Broccoli | $1/lb</item>
+        <item>Mushrooms | $3/lb</item>
+        <item>Tomatoes | $3/lb</item>
+    </array>
+    <array name="Roots">
+        <item>Roots</item>
+        <item>Alfalfa | $1/lb</item>
+        <item>Ginger | $3/lb</item>
+    </array>
+
+</resources>
