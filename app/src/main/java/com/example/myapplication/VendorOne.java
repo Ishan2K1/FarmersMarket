@@ -23,6 +23,8 @@ import android.view.View.OnClickListener;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myapplication.R;
+
 public class VendorOne extends AppCompatActivity {
     boolean click = true;
     private ImageButton fbBtn;

@@ -21,6 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MarketDetailActivity"
+            android:exported="false"
+            android:label="@string/title_marketDetail">
+            <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
+        </activity>
+
     </application>
 
 </manifest>
