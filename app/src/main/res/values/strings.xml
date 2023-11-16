@@ -34,5 +34,6 @@
         <item>Alfalfa | $1/lb</item>
         <item>Ginger | $3/lb</item>
     </array>
+    <string name="title_activity_vendor_log_in">VendorLogIn</string>
 
 </resources>
