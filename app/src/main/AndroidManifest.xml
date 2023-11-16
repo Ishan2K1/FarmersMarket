@@ -28,6 +28,18 @@
             android:label="@string/title_marketDetail">
             <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
         </activity>
+        <activity
+            android:name=".VendorOne"
+            android:exported="false"
+            android:label="@string/title_vendorDetail">
+            <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
+        </activity>
+        <activity
+            android:name=".VendorOneSpinner"
+            android:exported="false"
+            android:label="@string/title_vendorOneSpinner">
+            <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
+        </activity>
 
     </application>
 

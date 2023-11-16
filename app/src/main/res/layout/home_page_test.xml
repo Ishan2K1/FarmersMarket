@@ -47,7 +47,7 @@
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/Card1"
+            android:id="@+id/marketCard1"
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_below="@+id/FilterLO"
@@ -67,7 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:text="Champaign's Farmer's Market"
+                    android:text="Champaign Farmer Market"
                     android:textSize="20sp" />
 
                 <TextView
@@ -93,10 +93,10 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/Card2"
+            android:id="@+id/marketCard2"
             android:layout_width="350dp"
             android:layout_height="100dp"
-            android:layout_below="@+id/Card1"
+            android:layout_below="@+id/marketCard1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:clickable="true"
@@ -112,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:text="Urbana's Market"
+                    android:text="Chicago Farmer Market"
                     android:textSize="20sp" />
 
                 <TextView

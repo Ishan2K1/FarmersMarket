@@ -1,24 +1,14 @@
-package com.example.farmersmarket;
+package com.example.myapplication;
 
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.webkit.WebView;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.view.View.OnClickListener;
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,43 +22,43 @@ public class VendorOne extends AppCompatActivity {
     private ImageButton twitBtn;
     private ImageButton emBtn;
     private ImageButton gaBtn;
+
+    private void setSpinnerAdapter(int spinnerId, int arrayId, String title) {
+        if (arrayId != 0) {
+            Spinner spinner = findViewById(spinnerId);
+            String[] itemsArray = getResources().getStringArray(arrayId);
+            VendorOneSpinner adapter = new VendorOneSpinner(this, android.R.layout.simple_spinner_item, itemsArray, title);
+            spinner.setAdapter(adapter);
+        }
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.vendor_one);
 
-        ImageView imageView = (ImageView) findViewById(R.id.myImageView);
-        ImageButton descriptionBtn = (ImageButton) findViewById(R.id.description);
+        // 获取传递过来的供应商名称和图片资源 ID
+        String vendorName = getIntent().getStringExtra("VendorName");
+        int imageResId = getIntent().getIntExtra("ImageResId", 0);
+        int meatsArrayId = getIntent().getIntExtra("MeatsArrayId", 0);
+        int dairyArrayId = getIntent().getIntExtra("DairyArrayId", 0);
+        int vegetablesArrayId = getIntent().getIntExtra("VegetablesArrayId", 0);
+
+        // 设置供应商名称
+        TextView vendorNameTextView = findViewById(R.id.VendorNameTextView);
+        vendorNameTextView.setText(vendorName);
+
+        // 设置图片
+        ImageView imageView = findViewById(R.id.myImageView);
+        if (imageResId != 0) {
+            imageView.setImageResource(imageResId);
+        }
+
+        setSpinnerAdapter(R.id.spinner1_meats, meatsArrayId, "Meats");
+        setSpinnerAdapter(R.id.spinner2_dairy, dairyArrayId, "Dairy");
+        setSpinnerAdapter(R.id.spinner3_vegetables, vegetablesArrayId, "Vegetables");
 
 
-//        PopupWindow popUp = new PopupWindow(this);
-//        LinearLayout layout = new LinearLayout(this);
-//        LinearLayout mainLayout = new LinearLayout(this);
-//        TextView tv = new TextView(this);
-//        Button but = new Button(this);
-//        but.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (click) {
-//                    popUp.showAtLocation(layout, Gravity.CENTER, 0, 0);
-//                    popUp.update(50, 50, 300, 80);
-//                    click = false;
-//                } else {
-//                    popUp.dismiss();
-//                    click = true;
-//                }
-//            }
-//        });
-
-//        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-//                LinearLayout.LayoutParams.WRAP_CONTENT);
-//        layout.setOrientation(LinearLayout.VERTICAL);
-//        tv.setText("Hi this is a sample text for popup window");
-//        layout.addView(tv, params);
-//        popUp.setContentView(layout);
-//        // popUp.showAtLocation(layout, Gravity.BOTTOM, 10, 10);
-//        mainLayout.addView(but, params);
-//        setContentView(mainLayout);
 
         fbBtn = (ImageButton) findViewById(R.id.facebook_btn);
         instBtn = (ImageButton) findViewById(R.id.insta_btn);
@@ -81,13 +71,10 @@ public class VendorOne extends AppCompatActivity {
         emBtn.setOnClickListener(this::onClick);
         gaBtn.setOnClickListener(this::onClick);
 
-        Spinner spinner_one = findViewById(R.id.spinner1);
-        Spinner spinner_two = findViewById(R.id.spinner2);
-        Spinner spinner_three = findViewById(R.id.spinner3);
-        Spinner spinner_four = findViewById(R.id.spinner4);
-        Spinner spinner_five = findViewById(R.id.spinner5);
-
     }
+
+
+
     public void onClick(View v) {
         if (v.getId() == R.id.facebook_btn) {
             Uri fbPage = Uri.parse("https://www.facebook.com/");

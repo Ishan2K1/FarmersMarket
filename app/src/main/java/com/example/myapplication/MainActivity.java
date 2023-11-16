@@ -1,10 +1,13 @@
 package com.example.myapplication;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,26 +16,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page_test);
 
-        CardView cardView1 = findViewById(R.id.Card1);
+        CardView cardView1 = findViewById(R.id.marketCard1);
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 启动新的 Activity
                 Intent intent = new Intent(MainActivity.this, MarketDetailActivity.class);
+                intent.putExtra("MarketType", "marketCard1");
+                intent.putExtra("MarketName", "Champaign Farmer Market");
                 startActivity(intent);
             }
         });
 
-        CardView cardView2 = findViewById(R.id.Card2);
+        CardView cardView2 = findViewById(R.id.marketCard2);
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 启动新的 Activity
                 Intent intent = new Intent(MainActivity.this, MarketDetailActivity.class);
+                intent.putExtra("MarketType", "marketCard2");
+                intent.putExtra("MarketName", "Chicago Farmer Market");
                 startActivity(intent);
             }
         });
-
-        // 为其他 CardViews 设置监听器...
     }
 }
