@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, MarketDetailActivity.class);
                 intent.putExtra("MarketType", "marketCard1");
                 intent.putExtra("MarketName", "Champaign Farmer's Market");
+                intent.putExtra("Activity", "MainActivity");
                 startActivity(intent);
             }
         });
