@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -96,5 +97,23 @@ public class VendorOne extends AppCompatActivity {
             Intent chooser3 = Intent.createChooser(intent3, "OPEN WITH");
             startActivity(chooser3);
         }
+
+        Button home_button= findViewById(R.id.home_btn);
+        home_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(VendorOne.this, MainActivity.class);
+                startActivity(intentHome);
+            }
+        });
+        Button profile_button = (Button) findViewById(R.id.profileBtn);
+        profile_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(VendorOne.this, VendorLogIn.class);
+                startActivity(intentHome);
+            }
+        });
+        Button back_button = (Button) findViewById(R.id.backBtn);
     }
 }

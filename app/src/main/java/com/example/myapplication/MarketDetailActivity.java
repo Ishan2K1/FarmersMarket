@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,6 +49,34 @@ public class MarketDetailActivity extends AppCompatActivity {
                 R.array.bloomfield_flowers_meats, R.array.bloomfield_flowers_dairy, R.array.bloomfield_flowers_vegetables);
         setCardClickListener(vendorCard5, "Fresh Dairy", R.drawable.diary,
                 R.array.fresh_dairy_meats, R.array.fresh_dairy_dairy, R.array.fresh_dairy_vegetables);
+
+
+        Button home_button = (Button) findViewById(R.id.homeBtn);
+        home_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(MarketDetailActivity.this, MainActivity.class);
+                startActivity(intentHome);
+            }
+        });
+        Button profile_button = (Button) findViewById(R.id.profileBtn);
+        profile_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(MarketDetailActivity.this, VendorLogIn.class);
+                startActivity(intentHome);
+            }
+        });
+        Button back_button = (Button) findViewById(R.id.backBtn);
+        if (marketType.equals("marketCard1") || marketType.equals("marketCard2")) {
+            back_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent back = new Intent(MarketDetailActivity.this, MainActivity.class);
+                    startActivity(back);
+                }
+            });
+        }
     }
 
     private void setCardVisibility(boolean isVisible, CardView... cards) {

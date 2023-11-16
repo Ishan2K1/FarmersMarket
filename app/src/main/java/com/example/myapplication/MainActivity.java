@@ -6,7 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
+import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -35,6 +35,22 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("MarketType", "marketCard2");
                 intent.putExtra("MarketName", "Chicago Farmer Market");
                 startActivity(intent);
+            }
+        });
+        Button home_button = (Button) findViewById(R.id.homeBtn);
+        home_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intentHome);
+            }
+        });
+        Button profile_button = (Button) findViewById(R.id.profileBtn);
+        profile_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(MainActivity.this, VendorLogIn.class);
+                startActivity(intentHome);
             }
         });
     }
