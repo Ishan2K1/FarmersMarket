@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MarketDetailActivity.class);
                 intent.putExtra("MarketType", "marketCard1");
-                intent.putExtra("MarketName", "Champaign Farmer Market");
+                intent.putExtra("MarketName", "Champaign Farmer's Market");
                 startActivity(intent);
             }
         });
@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MarketDetailActivity.class);
                 intent.putExtra("MarketType", "marketCard2");
-                intent.putExtra("MarketName", "Chicago Farmer Market");
+                intent.putExtra("MarketName", "Chicago Farmer's Market");
+                intent.putExtra("Activity", "MainActivity");
                 startActivity(intent);
             }
         });
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentHome = new Intent(MainActivity.this, MainActivity.class);
+                intentHome.putExtra("MarketType", "MainActivity");
+                intentHome.putExtra("Activity", "MainActivity");
                 startActivity(intentHome);
             }
         });
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentHome = new Intent(MainActivity.this, VendorLogIn.class);
+                intentHome.putExtra("Activity", "MainActivity");
                 startActivity(intentHome);
             }
         });

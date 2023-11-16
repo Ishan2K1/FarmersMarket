@@ -70,6 +70,60 @@ public class VendorOne extends AppCompatActivity {
         emBtn.setOnClickListener(this::onClick);
         gaBtn.setOnClickListener(this::onClick);
 
+        Button home_button= findViewById(R.id.home_btn);
+        home_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(VendorOne.this, MainActivity.class);
+                intentHome.putExtra("Activity", "VendorOne");
+                startActivity(intentHome);
+            }
+        });
+        Button profile_button = (Button) findViewById(R.id.profileBtn);
+        profile_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(VendorOne.this, VendorLogIn.class);
+                intentHome.putExtra("Activity", "VendorOne");
+                startActivity(intentHome);
+            }
+        });
+        Button back_button = (Button) findViewById(R.id.backBtn);
+        String previousActivity = getIntent().getStringExtra("Activity");
+        if (previousActivity.equals("MarketDetailActivity")) {
+            back_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent back = new Intent(VendorOne.this, MarketDetailActivity.class);
+                    startActivity(back);
+                }
+            });
+        } else if (previousActivity.equals("VendorLogIn")) {
+            back_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent back = new Intent(VendorOne.this, VendorLogIn.class);
+                    startActivity(back);
+                }
+            });
+        } else if (previousActivity.equals("VendorOne")) {
+            back_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent back = new Intent(VendorOne.this, VendorOne.class);
+                    startActivity(back);
+                }
+            });
+        } else {
+            back_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent back = new Intent(VendorOne.this, MainActivity.class);
+                    startActivity(back);
+                }
+            });
+        }
+
     }
 
 
@@ -98,22 +152,6 @@ public class VendorOne extends AppCompatActivity {
             startActivity(chooser3);
         }
 
-        Button home_button= findViewById(R.id.home_btn);
-        home_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentHome = new Intent(VendorOne.this, MainActivity.class);
-                startActivity(intentHome);
-            }
-        });
-        Button profile_button = (Button) findViewById(R.id.profileBtn);
-        profile_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentHome = new Intent(VendorOne.this, VendorLogIn.class);
-                startActivity(intentHome);
-            }
-        });
-        Button back_button = (Button) findViewById(R.id.backBtn);
+
     }
 }

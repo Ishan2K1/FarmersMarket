@@ -56,6 +56,7 @@ public class MarketDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentHome = new Intent(MarketDetailActivity.this, MainActivity.class);
+                intentHome.putExtra("Activity", "MarketDetailActivity");
                 startActivity(intentHome);
             }
         });
@@ -63,12 +64,38 @@ public class MarketDetailActivity extends AppCompatActivity {
         profile_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentHome = new Intent(MarketDetailActivity.this, VendorLogIn.class);
-                startActivity(intentHome);
+                Intent intentProfile = new Intent(MarketDetailActivity.this, VendorLogIn.class);
+                intentProfile.putExtra("Activity", "MarketDetailActivity");
+                startActivity(intentProfile);
             }
         });
         Button back_button = (Button) findViewById(R.id.backBtn);
-        if (marketType.equals("marketCard1") || marketType.equals("marketCard2")) {
+        String previousActivity = getIntent().getStringExtra("Activity");
+        if (previousActivity.equals("MainActivity")) {
+            back_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent back = new Intent(MarketDetailActivity.this, MainActivity.class);
+                    startActivity(back);
+                }
+            });
+        } else if (previousActivity.equals("VendorLogIn")) {
+            back_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent back = new Intent(MarketDetailActivity.this, VendorLogIn.class);
+                    startActivity(back);
+                }
+            });
+        } else if (previousActivity.equals("VendorOne")) {
+            back_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent back = new Intent(MarketDetailActivity.this, VendorOne.class);
+                    startActivity(back);
+                }
+            });
+        } else {
             back_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

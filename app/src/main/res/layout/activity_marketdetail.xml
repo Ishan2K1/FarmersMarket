@@ -496,7 +496,8 @@
                 app:icon="@drawable/back_icon"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                app:iconGravity="textStart"/>
+                app:iconGravity="textStart"
+                style="?android:attr/buttonBarButtonStyle" />
             <Button
                 android:id="@+id/homeBtn"
                 android:layout_width="0dp"
@@ -506,7 +507,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 app:iconGravity="textStart"
-                />
+                style="?android:attr/buttonBarButtonStyle" />
             <Button
                 android:id="@+id/profileBtn"
                 android:layout_width="0dp"
@@ -515,7 +516,8 @@
                 android:background="#FFFFFF"
                 app:icon="@drawable/profile_icon"
                 android:gravity="center"
-                app:iconGravity="textStart"/>
+                app:iconGravity="textStart"
+                style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
 
 
