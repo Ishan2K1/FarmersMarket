@@ -1,13 +1,18 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -15,12 +20,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class VendorOne extends AppCompatActivity {
-    boolean click = true;
     private ImageButton fbBtn;
     private ImageButton instBtn;
     private ImageButton twitBtn;
     private ImageButton emBtn;
     private ImageButton gaBtn;
+
+    RelativeLayout parent;
 
     private void setSpinnerAdapter(int spinnerId, int arrayId, String title) {
         if (arrayId != 0) {
@@ -123,10 +129,27 @@ public class VendorOne extends AppCompatActivity {
                 }
             });
         }
-
+        ImageButton description = (ImageButton) findViewById(R.id.description);
+        parent = findViewById(R.id.parent_layout);
+        description.setOnClickListener(v -> {
+            showPopupWindow();
+        });
     }
 
+    private void showPopupWindow() {
+        View view = View.inflate(this, R.layout.vendor_one_description, null);
+        Button close = view.findViewById(R.id.close);
+        TextView body = findViewById(R.id.popup_msg);
+        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
 
+        PopupWindow popupWindow = new PopupWindow(view, width, height, false);
+        popupWindow.showAtLocation(parent, Gravity.CENTER, 0, 0);
+
+        close.setOnClickListener(v-> {
+            popupWindow.dismiss();
+        });
+    }
 
     public void onClick(View v) {
         if (v.getId() == R.id.facebook_btn) {
@@ -154,4 +177,5 @@ public class VendorOne extends AppCompatActivity {
 
 
     }
+
 }
