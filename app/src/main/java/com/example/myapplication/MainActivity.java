@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MarketDetailActivity.class);
                 intent.putExtra("MarketType", "marketCard1");
+                intent.putExtra("MarketName", "Champaign Farmer Market");
                 startActivity(intent);
             }
         });
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MarketDetailActivity.class);
                 intent.putExtra("MarketType", "marketCard2");
+                intent.putExtra("MarketName", "Chicago Farmer Market");
                 startActivity(intent);
             }
         });

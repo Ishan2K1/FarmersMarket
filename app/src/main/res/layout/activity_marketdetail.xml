@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
 
+
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -21,7 +22,18 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:text="More Information" />
+
+            <TextView
+                android:id="@+id/marketNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/moreInfoButton"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
         </RelativeLayout>
+
+
 
         <!-- ScrollView for displaying vendor cards -->
         <ScrollView
@@ -64,7 +76,7 @@
                                 android:id="@+id/vendorName1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Vendor Name"
+                                android:text="Luna's Mushroom"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -72,7 +84,7 @@
                                 android:id="@+id/vendorLogo1"
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
-                                android:src="@drawable/ic_vendor" /> <!-- Replace with actual logo drawable -->
+                                android:src="@drawable/mushroom" />
 
                         </LinearLayout>
 
@@ -83,35 +95,36 @@
                             android:layout_weight="2"
                             android:orientation="vertical">
 
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="超级咖啡豆1 - $12.99"
+                                android:text="Portobello Mushrooms - $5/lb"
                                 android:textSize="16sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
+                                android:text="Shiitake Mushrooms - $7.5/lb"
                                 android:textSize="16sp" />
 
-                            <!-- Add more TextViews here for each product -->
-                            <!-- ... -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Oyster Mushrooms - $6.99/lb"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Enoki Mushrooms - $4.00/pack"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Truffle Oil - $15/bottle"
+                                android:textSize="16sp" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -145,7 +158,7 @@
                                 android:id="@+id/vendorName2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Vendor Name"
+                                android:text="Green Vally Organics"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -153,7 +166,7 @@
                                 android:id="@+id/vendorLogo2"
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
-                                android:src="@drawable/ic_vendor" /> <!-- Replace with actual logo drawable -->
+                                android:src="@drawable/organic" />
 
                         </LinearLayout>
 
@@ -167,32 +180,32 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="超级咖啡豆2 - $12.99"
+                                android:text="Organic Tomatoes - $3.9/lb"
                                 android:textSize="16sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
+                                android:text="Fresh Basil Bunch - $2.5"
                                 android:textSize="16sp" />
 
-                            <!-- Add more TextViews here for each product -->
-                            <!-- ... -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Handmade Goat Cheese - $6"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Organic Blueberries - $4.99/pint"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Natural Honey - $7.99/jar"
+                                android:textSize="16sp" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -226,7 +239,7 @@
                                 android:id="@+id/vendorName3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Vendor Name"
+                                android:text="Sunny Farm Produce"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -234,7 +247,7 @@
                                 android:id="@+id/vendorLogo3"
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
-                                android:src="@drawable/ic_vendor" /> <!-- Replace with actual logo drawable -->
+                                android:src="@drawable/sunny" />
 
                         </LinearLayout>
 
@@ -248,32 +261,32 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="超级咖啡豆3 - $12.99"
+                                android:text="Fresh Strawberries - $3.99/pint"
                                 android:textSize="16sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
+                                android:text="Organic Spinach - $2.99/bunch"
                                 android:textSize="16sp" />
 
-                            <!-- Add more TextViews here for each product -->
-                            <!-- ... -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sweet Corn - $0.75/ear"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Heirloom Tomatoes - $4.5/lb"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Crisp Apples - $1.5/lb"
+                                android:textSize="16sp" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -307,7 +320,7 @@
                                 android:id="@+id/vendorName4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Vendor Name"
+                                android:text="Bloomfield Flowers"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -315,7 +328,7 @@
                                 android:id="@+id/vendorLogo4"
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
-                                android:src="@drawable/ic_vendor" /> <!-- Replace with actual logo drawable -->
+                                android:src="@drawable/flower" />
 
                         </LinearLayout>
 
@@ -329,32 +342,32 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="超级咖啡豆4 - $12.99"
+                                android:text="Roses Bouquet - $15"
                                 android:textSize="16sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
+                                android:text="Tulips Bundle - $12"
                                 android:textSize="16sp" />
 
-                            <!-- Add more TextViews here for each product -->
-                            <!-- ... -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Orchids Arrangement - $22"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sunflowers - $8/bunch"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Lavender Pot - $10"
+                                android:textSize="16sp" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -388,7 +401,7 @@
                                 android:id="@+id/vendorName5"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Vendor Name"
+                                android:text="Fresh Dairy"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />
 
@@ -396,7 +409,7 @@
                                 android:id="@+id/vendorLogo5"
                                 android:layout_width="100dp"
                                 android:layout_height="100dp"
-                                android:src="@drawable/ic_vendor" /> <!-- Replace with actual logo drawable -->
+                                android:src="@drawable/diary" />
 
                         </LinearLayout>
 
@@ -410,32 +423,33 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="超级咖啡豆5 - $12.99"
+                                android:text="Organic Milk - $3.5/litre"
                                 android:textSize="16sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
-                                android:textSize="16sp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="经典茶叶集 - $8.50"
+                                android:text="Fresh Yogurt - $2.99/container"
                                 android:textSize="16sp" />
 
-                            <!-- Add more TextViews here for each product -->
-                            <!-- ... -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Artisan Cheese - $5/piece"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Butter - $4/pack"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cream - $2.5/bottle"
+                                android:textSize="16sp" />
+
 
                         </LinearLayout>
                     </LinearLayout>

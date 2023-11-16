@@ -26,6 +26,15 @@
             android:layout_marginEnd="16dp"
             />
 
+        <TextView
+            android:id="@+id/VendorNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
         <!-- Image in the center -->
         <ImageView
             android:id="@+id/myImageView"
@@ -88,54 +97,23 @@
 
         <Spinner
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:id="@+id/spinner1"
-            android:entries="@array/Meats"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp"
-            >
-        </Spinner>
-        <Spinner
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:id="@+id/spinner2"
-            android:entries="@array/Dairy"
+            android:id="@+id/spinner1_meats"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginTop="10dp">
         </Spinner>
+
         <Spinner
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:id="@+id/spinner3"
-            android:entries="@array/Vegetables"
+            android:id="@+id/spinner2_dairy"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginTop="10dp">
         </Spinner>
+
         <Spinner
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:id="@+id/spinner4"
-            android:entries="@array/Roots"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp">
-        </Spinner>
-        <Spinner
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:id="@+id/spinner5"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp">
-        </Spinner>
-        <Spinner
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:id="@+id/spinner6"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp">
-        </Spinner>
-        <Spinner
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:id="@+id/spinner7"
+            android:id="@+id/spinner3_vegetables"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginTop="10dp">

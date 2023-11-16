@@ -67,7 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:text="Champaign's Farmer's Market"
+                    android:text="Champaign Farmer Market"
                     android:textSize="20sp" />
 
                 <TextView
@@ -112,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:text="Urbana's Market"
+                    android:text="Chicago Farmer Market"
                     android:textSize="20sp" />
 
                 <TextView
