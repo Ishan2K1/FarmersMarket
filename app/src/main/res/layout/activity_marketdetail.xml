@@ -464,7 +464,7 @@
         </ScrollView>
 
 
-        <!-- Bottom area for Add a New Market button -->
+        <!-- Bottom area for Add a New Store button -->
         <RelativeLayout
             android:id="@+id/bottomArea"
             android:layout_width="match_parent"
@@ -476,7 +476,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:text="Add a New Market" />
+                android:text="Add a New Store" />
         </RelativeLayout>
 
     </RelativeLayout>

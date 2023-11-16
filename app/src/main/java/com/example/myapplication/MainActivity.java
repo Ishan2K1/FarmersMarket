@@ -6,7 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
+import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -37,5 +37,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // 获取 "Add a New Market" 按钮
+        Button addNewStoreButton = findViewById(R.id.addnewmarketbut);
+        addNewStoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 创建跳转到 LoginActivity 的 Intent
+                Intent intent = new Intent(MainActivity.this, VendorLogin.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

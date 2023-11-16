@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,6 +49,20 @@ public class MarketDetailActivity extends AppCompatActivity {
                 R.array.bloomfield_flowers_meats, R.array.bloomfield_flowers_dairy, R.array.bloomfield_flowers_vegetables);
         setCardClickListener(vendorCard5, "Fresh Dairy", R.drawable.diary,
                 R.array.fresh_dairy_meats, R.array.fresh_dairy_dairy, R.array.fresh_dairy_vegetables);
+
+
+        // 获取 "Add a New Store" 按钮
+        Button addNewStoreButton = findViewById(R.id.addNewMarketButton);
+
+        // 为按钮设置点击监听器
+        addNewStoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 创建跳转到 LoginActivity 的 Intent
+                Intent intent = new Intent(MarketDetailActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setCardVisibility(boolean isVisible, CardView... cards) {

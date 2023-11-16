@@ -138,7 +138,7 @@
         </androidx.cardview.widget.CardView>
 
         <Button
-            android:id="@+id/bottomButton"
+            android:id="@+id/addnewmarketbut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
