@@ -15,10 +15,11 @@
         <!-- Circular button in the top right corner -->
         <ImageButton
             android:id="@+id/description"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:textSize="30sp"
             android:background="@drawable/iicon"
+            android:contentDescription="More info"
             android:textAllCaps="false"
             android:layout_gravity="end"
             android:layout_marginTop="16dp"
@@ -31,8 +32,9 @@
             android:layout_width="190dp"
             android:layout_height="170dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="-6dp"
+            android:padding="14dp"
             android:src="@drawable/vendorlogo"
+            android:contentDescription="Vendor logo"
             android:layout_margin="20dp"/>
 
         <!-- Buttons in a horizontal LinearLayout -->
@@ -41,47 +43,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:padding="5dp">
+            android:padding="8dp">
             <ImageButton
                 android:id="@+id/facebook_btn"
                 android:background="@drawable/fbic"
-                android:text="facebook button"
-                android:textSize="0sp"
+                android:contentDescription="Open Facebook"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_margin="3dp"/>
+                android:layout_margin="8dp"/>
+
             <ImageButton
                 android:id="@+id/insta_btn"
                 android:background="@drawable/instic"
-                android:text="insta button"
-                android:textSize="0sp"
+                android:contentDescription="Open Instagram"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_margin="3dp"/>
+                android:layout_margin="8dp"/>
+
             <ImageButton
                 android:id="@+id/twitter_btn"
                 android:background="@drawable/twitic"
-                android:text="twitter"
-                android:textSize="0sp"
+                android:contentDescription="Open Twitter"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_margin="3dp"/>
+                android:layout_margin="8dp"/>
+
             <ImageButton
                 android:id="@+id/email_btn"
                 android:background="@drawable/emic"
-                android:text="email button"
-                android:textSize="0sp"
+                android:contentDescription="Send Email"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_margin="3dp"/>
+                android:layout_margin="8dp"/>
+
             <ImageButton
                 android:id="@+id/gallery_btn"
                 android:background="@drawable/gaic"
-                android:text="gallery button"
-                android:textSize="0sp"
+                android:contentDescription="Open Gallery"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_margin="3dp"/>
+                android:layout_margin="8dp"/>
+
         </LinearLayout>
 
         <Spinner

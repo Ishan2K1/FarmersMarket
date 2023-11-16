@@ -8,6 +8,7 @@
     <string name="title_profile">Profile</string>
     <string name="title">title_return</string>
     <string name="title_marketDetail">Market Detail</string>
+    <string name="title_vendorDetail">Vendor Detail</string>
 
     <array name="Meats">
         <item>Meats</item>
