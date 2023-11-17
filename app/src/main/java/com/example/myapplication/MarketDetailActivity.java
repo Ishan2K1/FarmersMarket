@@ -104,6 +104,18 @@ public class MarketDetailActivity extends AppCompatActivity {
                 }
             });
         }
+
+        // 获取 "Add a New Market" 按钮
+        Button addNewStoreButton = findViewById(R.id.addnewstorebut);
+        // 为按钮设置点击监听器
+        addNewStoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 创建跳转到 LoginActivity 的 Intent
+                Intent intent = new Intent(MarketDetailActivity.this, MarketDetailLogin.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setCardVisibility(boolean isVisible, CardView... cards) {

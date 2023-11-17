@@ -42,7 +42,27 @@
         </activity>
         <activity android:name=".VendorLogIn"
             android:exported="false"
-            android:label="@string/title_vendorOneSpinner">
+            android:label="@string/title_nav">
+        </activity>
+        <activity
+            android:name=".MarketExploreLogin"
+            android:exported="false"
+            android:label="@string/title_log_in"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".AddNewEvent"
+            android:exported="false"
+            android:label="@string/title_addnewevent"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".MarketDetailLogin"
+            android:exported="false"
+            android:label="@string/title_Login">
+        </activity>
+        <activity
+            android:name=".AddNewStoreActivity"
+            android:exported="false"
+            android:label="@string/title_addnewstore">
         </activity>
 
     </application>
