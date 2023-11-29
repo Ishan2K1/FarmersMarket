@@ -185,15 +185,5 @@
             app:icon="@drawable/home_icon"
             app:iconGravity="textStart" />
 
-        <Button
-            android:id="@+id/profileBtn"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFFFFF"
-            android:gravity="center"
-            app:icon="@drawable/profile_icon"
-            app:iconGravity="textStart" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

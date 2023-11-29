@@ -508,16 +508,7 @@
                 android:gravity="center"
                 app:iconGravity="textStart"
                 style="?android:attr/buttonBarButtonStyle" />
-            <Button
-                android:id="@+id/profileBtn"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                app:icon="@drawable/profile_icon"
-                android:gravity="center"
-                app:iconGravity="textStart"
-                style="?android:attr/buttonBarButtonStyle" />
+
         </LinearLayout>
 
 
