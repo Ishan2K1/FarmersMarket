@@ -81,15 +81,14 @@ public class VendorOne extends AppCompatActivity {
                 startActivity(intentHome);
             }
         });
-        Button profile_button = (Button) findViewById(R.id.profileBtn);
-        profile_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentHome = new Intent(VendorOne.this, VendorLogin.class);
-                intentHome.putExtra("Activity", "VendorOne");
-                startActivity(intentHome);
-            }
-        });
+//        profile_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intentHome = new Intent(VendorOne.this, VendorLogin.class);
+//                intentHome.putExtra("Activity", "VendorOne");
+//                startActivity(intentHome);
+//            }
+//        });
 //        Button back_button = (Button) findViewById(R.id.backBtn);
 //        String previousActivity = getIntent().getStringExtra("Activity");
 //        if (previousActivity.equals("MarketDetailActivity")) {
