@@ -28,6 +28,42 @@
             android:label="@string/title_marketDetail">
             <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
         </activity>
+        <activity
+            android:name=".VendorOne"
+            android:exported="false"
+            android:label="@string/title_vendorDetail">
+            <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
+        </activity>
+        <activity
+            android:name=".VendorOneSpinner"
+            android:exported="false"
+            android:label="@string/title_vendorOneSpinner">
+            <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
+        </activity>
+        <activity android:name=".VendorLogIn"
+            android:exported="false"
+            android:label="@string/title_nav">
+        </activity>
+        <activity
+            android:name=".MarketExploreLogin"
+            android:exported="false"
+            android:label="@string/title_log_in"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".AddNewEvent"
+            android:exported="false"
+            android:label="@string/title_addnewevent"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".MarketDetailLogin"
+            android:exported="false"
+            android:label="@string/title_Login">
+        </activity>
+        <activity
+            android:name=".AddNewStoreActivity"
+            android:exported="false"
+            android:label="@string/title_addnewstore">
+        </activity>
 
     </application>
 
