@@ -40,9 +40,9 @@
             android:label="@string/title_vendorOneSpinner">
             <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
         </activity>
-        <activity android:name=".VendorLogIn"
+        <activity android:name=".VendorLogin"
             android:exported="false"
-            android:label="@string/title_nav">
+            android:label="@string/title_Login">
         </activity>
         <activity
             android:name=".MarketExploreLogin"

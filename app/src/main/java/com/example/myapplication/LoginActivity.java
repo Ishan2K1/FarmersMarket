@@ -24,5 +24,14 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+//        Button home = findViewById(R.id.home_btn);
+//        home.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intentHome = new Intent(MarketDetailActivity.this, MainActivity.class);
+//                startActivity(intentHome);
+//            }
+//        });
     }
 }

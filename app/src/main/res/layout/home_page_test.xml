@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="16dp"
@@ -147,46 +148,52 @@
             android:layout_marginBottom="45dp"
             android:text="Add new Market" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:paddingBottom="-20dp"
-            android:layout_alignParentBottom="true"
-            android:background="#FFFFFF"
-            android:elevation="8dp"
-            android:paddingTop="-8dp">
-            <Button
-                android:id="@+id/backBtn"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:icon="@drawable/back_icon"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                app:iconGravity="textStart"
-                style="?android:attr/buttonBarButtonStyle" />
-            <Button
-                android:id="@+id/homeBtn"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                app:icon="@drawable/home_icon"
-                android:background="#FFFFFF"
-                android:layout_weight="1"
-                android:gravity="center"
-                app:iconGravity="textStart"
-                style="?android:attr/buttonBarButtonStyle" />
-            <Button
-                android:id="@+id/profileBtn"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                app:icon="@drawable/profile_icon"
-                android:gravity="center"
-                app:iconGravity="textStart"
-                style="?android:attr/buttonBarButtonStyle" />
-        </LinearLayout>
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:paddingTop="-8dp"
+        android:paddingBottom="-20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/backBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            app:icon="@drawable/back_icon"
+            app:iconGravity="textStart" />
+
+        <Button
+            android:id="@+id/homeBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            app:icon="@drawable/home_icon"
+            app:iconGravity="textStart" />
+
+        <Button
+            android:id="@+id/profileBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            app:icon="@drawable/profile_icon"
+            app:iconGravity="textStart" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
