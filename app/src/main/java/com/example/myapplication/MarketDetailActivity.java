@@ -51,69 +51,24 @@ public class MarketDetailActivity extends AppCompatActivity {
                 R.array.fresh_dairy_meats, R.array.fresh_dairy_dairy, R.array.fresh_dairy_vegetables);
 
 
-        Button home_button = (Button) findViewById(R.id.homeBtn);
-        home_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentHome = new Intent(MarketDetailActivity.this, MainActivity.class);
-                intentHome.putExtra("Activity", "MarketDetailActivity");
-                startActivity(intentHome);
-            }
-        });
-        Button profile_button = (Button) findViewById(R.id.profileBtn);
-        profile_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentProfile = new Intent(MarketDetailActivity.this, VendorLogIn.class);
-                intentProfile.putExtra("Activity", "MarketDetailActivity");
-                startActivity(intentProfile);
-            }
-        });
-        Button back_button = (Button) findViewById(R.id.backBtn);
-        String previousActivity = getIntent().getStringExtra("Activity");
-        if (previousActivity.equals("MainActivity")) {
-            back_button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent back = new Intent(MarketDetailActivity.this, MainActivity.class);
-                    startActivity(back);
-                }
-            });
-        } else if (previousActivity.equals("VendorLogIn")) {
-            back_button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent back = new Intent(MarketDetailActivity.this, VendorLogIn.class);
-                    startActivity(back);
-                }
-            });
-        } else if (previousActivity.equals("VendorOne")) {
-            back_button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent back = new Intent(MarketDetailActivity.this, VendorOne.class);
-                    startActivity(back);
-                }
-            });
-        } else {
-            back_button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent back = new Intent(MarketDetailActivity.this, MainActivity.class);
-                    startActivity(back);
-                }
-            });
-        }
+        // 获取 "Add a New Store" 按钮
+        Button addNewStoreButton = findViewById(R.id.addNewMarketButton);
 
-        // 获取 "Add a New Market" 按钮
-        Button addNewStoreButton = findViewById(R.id.addnewstorebut);
         // 为按钮设置点击监听器
         addNewStoreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // 创建跳转到 LoginActivity 的 Intent
-                Intent intent = new Intent(MarketDetailActivity.this, MarketDetailLogin.class);
+                Intent intent = new Intent(MarketDetailActivity.this, LoginActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        Button backButton = findViewById(R.id.backBtn);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getOnBackPressedDispatcher().onBackPressed();
             }
         });
     }
@@ -143,3 +98,4 @@ public class MarketDetailActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
+

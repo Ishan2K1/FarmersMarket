@@ -474,11 +474,11 @@
             android:layout_marginBottom="50dp">
 
             <Button
-                android:id="@+id/addnewstorebut"
+                android:id="@+id/addNewMarketButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:text="Add a New Store" />
+                android:text="Add a New Market" />
         </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -502,7 +502,7 @@
                 android:id="@+id/homeBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                app:icon="@drawable/home_icon"
+                app:icon="@drawable/ic_home_black_24dp"
                 android:background="#FFFFFF"
                 android:layout_weight="1"
                 android:gravity="center"
