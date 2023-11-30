@@ -1,0 +1,63 @@
+[
+  {
+    "id": "1",
+    "name": "Champaign Farmer Market",
+    "distance": 30,
+    "time": 3,
+    "address": "123 Market St, Champaign, IL, USA",
+    "description": "A vibrant community gathering place featuring local produce and artisanal goods.",
+    "email": "info@champaignmarket.com",
+    "phone": "+1 217-555-0100",
+    "latitude": 40.1164,
+    "longitude": -88.2434
+  },
+  {
+    "id": "2",
+    "name": "Chicago Farmer Market",
+    "distance": 100,
+    "time": 7,
+    "address": "200 N Clark St, Chicago, IL, USA",
+    "description": "Offering a rich assortment of fresh farm produce in the heart of the city.",
+    "email": "contact@chicagofarmersmarket.com",
+    "phone": "+1 312-555-0200",
+    "latitude": 41.8838,
+    "longitude": -87.6318
+  },
+  {
+    "id": "3",
+    "name": "Springfield Organic Market",
+    "distance": 70,
+    "time": 15,
+    "address": "101 Capitol Ave, Springfield, IL, USA",
+    "description": "Specializing in organic and sustainable products from local farms.",
+    "email": "springfieldorganic@market.com",
+    "phone": "+1 217-555-0300",
+    "latitude": 39.7982,
+    "longitude": -89.6543
+  },
+  {
+    "id": "4",
+    "name": "Urbana Local Market",
+    "distance": 20,
+    "time": 4,
+    "address": "400 S Vine St, Urbana, IL, USA",
+    "description": "A neighborhood market known for its friendly vendors and quality produce.",
+    "email": "urbanamarket@local.com",
+    "phone": "+1 217-555-0400",
+    "latitude": 40.1106,
+    "longitude": -88.2042
+  },
+  {
+    "id": "5",
+    "name": "Decatur Fresh Market",
+    "distance": 150,
+    "time": 20,
+    "address": "333 W Main St, Decatur, IL, USA",
+    "description": "An expansive market place offering a wide variety of fresh food and unique goods.",
+    "email": "fresh@decaturmarket.com",
+    "phone": "+1 217-555-0500",
+    "latitude": 39.8403,
+    "longitude": -88.9548
+  }
+]
+
