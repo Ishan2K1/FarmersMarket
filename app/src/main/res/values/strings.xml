@@ -8,42 +8,89 @@
     <string name="title_profile">Profile</string>
     <string name="title">title_return</string>
     <string name="title_marketDetail">Market Detail</string>
+    <string name="title_vendorDetail">Vendor Detail</string>
+    <string name="title_vendorOneSpinner">Vendor Spinner</string>
+    <string name="title_Login">Log In</string>
+    <string name="title_addnewstore">Add a New Store</string>
+    <string name="title_log_in">Log in </string>
+    <string name="title_addnewevent">Add a new Event </string>
 
-    <string-array name="distances">
-        <item>1</item>
-        <item>5</item>
-        <item>10</item>
-        <item>15</item>
-        <item>20</item>
-        <item>25</item>
-        <item>50</item>
-        <item>100</item>
+    <!-- Luna's Mushroom -->
+    <string-array name="lunas_mushroom_meats">
+        <item>Portobello Steak | $12/lb</item>
+        <item>Shiitake Sausage | $10/lb</item>
+    </string-array>
+    <string-array name="lunas_mushroom_vegetables">
+        <item>Truffle Mushrooms | $15/lb</item>
+        <item>Enoki Mushrooms | $8/lb</item>
+    </string-array>
+    <string-array name="lunas_mushroom_dairy">
+        <item>Mushroom Brie | $7/piece</item>
+        <item>Truffle Butter | $5/pack</item>
     </string-array>
 
-    <array name="Meats">
-        <item>Meats</item>
-        <item>Chicken | $5/lb</item>
-        <item>Beef | $3/lb</item>
-        <item>Lamb | $3/lb</item>
-        <item>Ostrich | $10/lb</item>
-        <item>Crocodile | $17/lb</item>
-    </array>
-    <array name="Dairy">
-        <item>Dairy</item>
-        <item>Cow milk | $3/gal</item>
-        <item>Goat milk | $5/gal</item>
-        <item>Goat cheese | $3/lb</item>
-    </array>
-    <array name="Vegetables">
-        <item>Vegetables</item>
-        <item>Broccoli | $1/lb</item>
-        <item>Mushrooms | $3/lb</item>
-        <item>Tomatoes | $3/lb</item>
-    </array>
-    <array name="Roots">
-        <item>Roots</item>
-        <item>Alfalfa | $1/lb</item>
-        <item>Ginger | $3/lb</item>
-    </array>
+
+    <!-- Green Valley Organics -->
+    <string-array name="green_valley_organics_meats">
+        <item>Organic Chicken | $6/lb</item>
+        <item>Grass-fed Beef | $7/lb</item>
+    </string-array>
+    <string-array name="green_valley_organics_vegetables">
+        <item>Organic Spinach | $3/bunch</item>
+        <item>Heirloom Tomatoes | $4/lb</item>
+    </string-array>
+    <string-array name="green_valley_organics_dairy">
+        <item>Organic Milk | $3/gal</item>
+        <item>Organic Cheese | $5/lb</item>
+    </string-array>
+
+
+    <!-- Sunny Farm Produce-->
+    <string-array name="sunny_farm_produce_meats">
+        <item>Free-range Chicken | $5/lb</item>
+        <item>Farm-raised Turkey | $8/lb</item>
+    </string-array>
+    <string-array name="sunny_farm_produce_vegetables">
+        <item>Sweet Corn | $1/ear</item>
+        <item>Broccoli | $2/lb</item>
+    </string-array>
+    <string-array name="sunny_farm_produce_dairy">
+        <item>Farm Fresh Milk | $4/gal</item>
+        <item>Homemade Yogurt | $3/container</item>
+    </string-array>
+
+
+    <!-- Bloomfield Flower -->
+    <string-array name="bloomfield_flowers_meats">
+        <item>Edible Flowers | $10/pack</item>
+        <item>Floral Infused Chicken | $7/lb</item>
+    </string-array>
+    <string-array name="bloomfield_flowers_vegetables">
+        <item>Lavender | $5/bunch</item>
+        <item>Rose Petals | $6/pack</item>
+    </string-array>
+    <string-array name="bloomfield_flowers_dairy">
+        <item>Rose Cream Cheese | $4/pack</item>
+        <item>Floral Infused Butter | $6/pack</item>
+    </string-array>
+
+
+
+    <!-- Fresh Diary  -->
+    <string-array name="fresh_dairy_meats">
+        <item>Cheese-filled Sausages | $8/lb</item>
+        <item>Milk-fed Veal | $12/lb</item>
+    </string-array>
+    <string-array name="fresh_dairy_vegetables">
+        <item>Creamed Spinach | $4/pack</item>
+        <item>Butter Lettuce | $3/head</item>
+    </string-array>
+    <string-array name="fresh_dairy_dairy">
+        <item>Fresh Cow Milk | $2.50/gal</item>
+        <item>Artisan Cheese | $6/lb</item>
+    </string-array>
+
+
+
 
 </resources>

@@ -46,113 +46,106 @@
                 android:layout_weight="1" />
         </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/marketlist"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/marketCard1"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
             android:layout_below="@+id/FilterLO"
-            android:layout_marginTop="27dp" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
-        <!--        <androidx.cardview.widget.CardView-->
-        <!--            android:id="@+id/Card1"-->
-        <!--            android:layout_width="350dp"-->
-        <!--            android:layout_height="100dp"-->
-        <!--            android:layout_below="@+id/FilterLO"-->
-        <!--            android:layout_centerHorizontal="true"-->
-        <!--            android:layout_marginTop="0dp"-->
-        <!--            android:clickable="true"-->
-        <!--            android:focusable="true"-->
-        <!--            app:cardCornerRadius="8dp"-->
-        <!--            app:cardElevation="8dp">-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <!--            <RelativeLayout-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent">-->
+                <TextView
+                    android:id="@+id/CardtitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Champaign Farmer Market"
+                    android:textSize="20sp" />
 
-        <!--                <TextView-->
-        <!--                    android:id="@+id/CardtitleTextView"-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_centerHorizontal="true"-->
-        <!--                    android:text="Champaign's Farmer's Market"-->
-        <!--                    android:textSize="20sp" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="3 mi away"
+                    android:textSize="12sp" />
 
-        <!--                <TextView-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_alignParentStart="true"-->
-        <!--                    android:layout_alignParentBottom="true"-->
-        <!--                    android:layout_marginStart="12dp"-->
-        <!--                    android:layout_marginBottom="12dp"-->
-        <!--                    android:text="3 mi away"-->
-        <!--                    android:textSize="12sp" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="5 days later"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
-        <!--                <TextView-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_alignParentEnd="true"-->
-        <!--                    android:layout_alignParentBottom="true"-->
-        <!--                    android:layout_marginEnd="12dp"-->
-        <!--                    android:layout_marginBottom="12dp"-->
-        <!--                    android:text="5 days later"-->
-        <!--                    android:textSize="12sp" />-->
-        <!--            </RelativeLayout>-->
-        <!--        </androidx.cardview.widget.CardView>-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/marketCard2"
+            android:layout_width="350dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/marketCard1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
 
-        <!--        <androidx.cardview.widget.CardView-->
-        <!--            android:id="@+id/Card2"-->
-        <!--            android:layout_width="350dp"-->
-        <!--            android:layout_height="100dp"-->
-        <!--            android:layout_below="@+id/Card1"-->
-        <!--            android:layout_centerHorizontal="true"-->
-        <!--            android:layout_marginTop="30dp"-->
-        <!--            android:clickable="true"-->
-        <!--            android:focusable="true"-->
-        <!--            app:cardCornerRadius="8dp"-->
-        <!--            app:cardElevation="8dp">-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <!--            <RelativeLayout-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent">-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Chicago Farmer Market"
+                    android:textSize="20sp" />
 
-        <!--                <TextView-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_centerHorizontal="true"-->
-        <!--                    android:text="Urbana's Market"-->
-        <!--                    android:textSize="20sp" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="4 mi away"
+                    android:textSize="12sp" />
 
-        <!--                <TextView-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_alignParentStart="true"-->
-        <!--                    android:layout_alignParentBottom="true"-->
-        <!--                    android:layout_marginStart="12dp"-->
-        <!--                    android:layout_marginBottom="12dp"-->
-        <!--                    android:text="4 mi away"-->
-        <!--                    android:textSize="12sp" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="1 days later"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
 
-        <!--                <TextView-->
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_alignParentEnd="true"-->
-        <!--                    android:layout_alignParentBottom="true"-->
-        <!--                    android:layout_marginEnd="12dp"-->
-        <!--                    android:layout_marginBottom="12dp"-->
-        <!--                    android:text="1 days later"-->
-        <!--                    android:textSize="12sp" />-->
-        <!--            </RelativeLayout>-->
-        <!--        </androidx.cardview.widget.CardView>-->
-
-        <!--        <Button-->
-        <!--            android:id="@+id/bottomButton"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_alignParentEnd="true"-->
-        <!--            android:layout_alignParentBottom="true"-->
-        <!--            android:layout_marginEnd="8dp"-->
-        <!--            android:layout_marginBottom="45dp"-->
-        <!--            android:text="Add new Market" />-->
+        <Button
+            android:id="@+id/addnewmarketbut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="45dp"
+            android:text="Add new Market" />
 
     </RelativeLayout>
 
