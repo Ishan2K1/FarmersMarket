@@ -8,6 +8,7 @@
     <string name="title_profile">Profile</string>
     <string name="title">title_return</string>
     <string name="title_marketDetail">Market Detail</string>
+    <string name="MAPS_API_KEY">AIzaSyAs534f7IwttA0SA4SxUbd_IZNuYHiRQcc</string>
 
     <string-array name="distances">
         <item>1</item>

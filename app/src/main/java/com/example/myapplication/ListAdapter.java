@@ -35,6 +35,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
         listFull = new ArrayList<>(list);
     }
 
+    public List<MarketModel> getFilteredList() {
+        return filteredList;
+    }
+
     @NonNull
     @Override
     public ListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -5,22 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:context=".MainActivity"
-        tools:layout_editor_absoluteX="0dp">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
 
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
             android:text="Farmer's Market"
             android:textSize="24sp" />
@@ -29,7 +24,6 @@
             android:id="@+id/FilterLO"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/titleTextView"
             android:layout_marginBottom="16dp"
             android:orientation="horizontal">
 
@@ -50,8 +44,26 @@
             android:id="@+id/marketlist"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:layout_below="@+id/FilterLO"
             android:layout_marginTop="27dp" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="395dp"
+            android:layout_height="232dp"
+            tools:context=".MapsActivity" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="0dp">
 
         <!--        <androidx.cardview.widget.CardView-->
         <!--            android:id="@+id/Card1"-->

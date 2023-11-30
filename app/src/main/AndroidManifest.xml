@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -28,6 +29,10 @@
             android:label="@string/title_marketDetail">
             <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/MAPS_API_KEY" />
 
     </application>
 

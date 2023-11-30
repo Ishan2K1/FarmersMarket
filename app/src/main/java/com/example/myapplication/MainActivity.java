@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,18 +21,38 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     RecyclerView marketList;
     Spinner distanceSpinner, timeSpinner;
     List<MarketModel> marketArray = new ArrayList<>(), filteredMarketArray = new ArrayList<>();
     ListAdapter listAdapter;
+    GoogleMap map;
 
     int distance = 100, time = 100;
+
+    public void updateMap() {
+        if (map == null) {
+            return;
+        }
+        map.clear();
+        List<MarketModel> markets = listAdapter.getFilteredList();
+        for(MarketModel marketModel: markets) {
+            LatLng loc = new LatLng(marketModel.getLatitude(), marketModel.getLongitude());
+            map.addMarker(new MarkerOptions().position(loc).title(marketModel.getName()));
+            map.moveCamera(CameraUpdateFactory.newLatLng(loc));
+        }
+    }
 
     public String loadJSONFromAsset() {
         String json = null;
@@ -88,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 distance = Integer.valueOf((String) parent.getItemAtPosition(position));
                 listAdapter.getFilter().filter((CharSequence) parent.getItemAtPosition(position)+","+time);
+                updateMap();
             }
 
             @Override
@@ -114,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 time = Integer.valueOf((String) parent.getItemAtPosition(position));
                 listAdapter.getFilter().filter(distance + "," + (CharSequence) parent.getItemAtPosition(position));
+                updateMap();
             }
 
             @Override
@@ -124,5 +147,16 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        distanceSpinner.setSelection(7); // hard coded to 100
+        timeSpinner.setSelection(7); // hard coded to 100
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        map = googleMap;
     }
 }
