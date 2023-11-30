@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 distance = Integer.valueOf((String) parent.getItemAtPosition(position));
-                listAdapter.getFilter().filter((CharSequence) (parent.getItemAtPosition(position) + "," + String.valueOf(time)));
+                listAdapter.getFilter().filter((CharSequence) parent.getItemAtPosition(position)+","+time);
             }
 
             @Override
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 time = Integer.valueOf((String) parent.getItemAtPosition(position));
-                listAdapter.getFilter().filter((CharSequence) parent.getItemAtPosition(position));
+                listAdapter.getFilter().filter(distance + "," + (CharSequence) parent.getItemAtPosition(position));
             }
 
             @Override

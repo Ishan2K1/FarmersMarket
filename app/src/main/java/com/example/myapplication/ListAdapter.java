@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
 
     public ListAdapter(Context context, List<MarketModel> list) {
         this.context = context;
-        filteredList = list;
+        filteredList = new ArrayList<>(list);
         listFull = new ArrayList<>(list);
     }
 
@@ -67,6 +68,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
 
     @Override
     public int getItemCount() {
+        if (filteredList == null) {
+            return 0;
+        }
         return filteredList.size();
     }
 
@@ -80,22 +84,18 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
         protected FilterResults performFiltering(CharSequence constraint) {
             List<MarketModel> filteredMarkets = new ArrayList<>();
 
+
+
             if (constraint == null || constraint.length() == 0) {
                 filteredMarkets.addAll(listFull);
             } else {
-                String arginput = "10,2";
-                String[] args = (arginput).split(",");
+                String[] args = (constraint.toString()).split(",");
+
                 int maxdistance = Integer.parseInt(args[0]);
                 int maxtime = Integer.parseInt(args[1]);
-//                String maxtime = args[1];
-////                Log.d("maxtime", maxtime);
-                for(int i = 0; i < args.length; i++) {
-                    Log.d("args", args[i]);
-                }
-
 
                 for (MarketModel marketModel: listFull) {
-                    if (marketModel.getDistance() <= maxdistance) {
+                    if (marketModel.getDistance() <= maxdistance && marketModel.getTime() <= maxtime) {
                         filteredMarkets.add(marketModel);
                     }
                 }
