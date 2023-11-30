@@ -59,7 +59,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
             public void onClick(View v) {
 //                Toast.makeText(v.getContext(), "My Item position: " + position, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, MarketDetailActivity.class);
-//                intent.putExtra("name", filteredList.get(position).getName());
+                intent.putExtra("name", filteredList.get(position).getName());
                 context.startActivity(intent);
             }
         });
@@ -78,17 +78,23 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
     private Filter filter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
-            Log.d("here", (String) constraint);
             List<MarketModel> filteredMarkets = new ArrayList<>();
 
             if (constraint == null || constraint.length() == 0) {
                 filteredMarkets.addAll(listFull);
             } else {
-                int maxdistance = Integer.parseInt((String)constraint);
-                Log.d("maxdistanceinfilter", String.valueOf(maxdistance));
+                String arginput = "10,2";
+                String[] args = (arginput).split(",");
+                int maxdistance = Integer.parseInt(args[0]);
+                int maxtime = Integer.parseInt(args[1]);
+//                String maxtime = args[1];
+////                Log.d("maxtime", maxtime);
+                for(int i = 0; i < args.length; i++) {
+                    Log.d("args", args[i]);
+                }
+
 
                 for (MarketModel marketModel: listFull) {
-                    Log.d("readingmarket", marketModel.getDistance() + " " + String.valueOf(marketModel.getDistance() <= maxdistance));
                     if (marketModel.getDistance() <= maxdistance) {
                         filteredMarkets.add(marketModel);
                     }
@@ -103,7 +109,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
         @Override
         protected void publishResults(CharSequence constraint, FilterResults results) {
             filteredList = (List)results.values;
-            Log.d("results size", filteredList.toString());
             notifyDataSetChanged();
         }
     };

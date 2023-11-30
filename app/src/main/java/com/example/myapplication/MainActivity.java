@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 distance = Integer.valueOf((String) parent.getItemAtPosition(position));
-                listAdapter.getFilter().filter((CharSequence) parent.getItemAtPosition(position));
+                listAdapter.getFilter().filter((CharSequence) (parent.getItemAtPosition(position) + "," + String.valueOf(time)));
             }
 
             @Override
@@ -97,32 +97,32 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // update based on time filter
-//        timeSpinner = findViewById(R.id.timeSpinner);
-//        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(
-//                this,
-//                R.array.distances,
-//                android.R.layout.simple_spinner_item
-//        );
-//
-//        // Specify the layout to use when the list of choices appears.
-//        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//
-//        // Apply the adapter to the spinner.
-//        timeSpinner.setAdapter(adapter2);
-//        timeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                time = Integer.valueOf((String) parent.getItemAtPosition(position));
-//
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//
-//
-//        });
+        timeSpinner = findViewById(R.id.timeSpinner);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(
+                this,
+                R.array.distances,
+                android.R.layout.simple_spinner_item
+        );
+
+        // Specify the layout to use when the list of choices appears.
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner.
+        timeSpinner.setAdapter(adapter2);
+        timeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                time = Integer.valueOf((String) parent.getItemAtPosition(position));
+                listAdapter.getFilter().filter((CharSequence) parent.getItemAtPosition(position));
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+
+        });
 
     }
 }
