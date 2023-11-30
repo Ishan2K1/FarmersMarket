@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/moreinfo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/iicon"
+            android:contentDescription="More info"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:id="@+id/begin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/moreinfo">
+
+            <TextView
+                android:id="@+id/vendorNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp" />
+
+            <ImageView
+                android:id="@+id/storeLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/mushroom"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/begin"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- ViewPager2 for Pop Products -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular Products"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/popViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/storeLogo"
+                android:layout_marginTop="8dp"/>
+
+
+            <!-- ViewPager2 for Meats -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meats"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/meatsViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/storeLogo"
+                android:layout_marginTop="8dp"/>
+
+            <!-- ViewPager2 for Dairy -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dairy"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/dairyViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/meatsViewPager"
+                android:layout_marginTop="8dp"/>
+
+            <!-- ViewPager2 for Vegetables -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vegetables"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vegetablesViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dairyViewPager"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Contact Buttons Layout -->
+        <LinearLayout
+            android:id="@+id/linlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/products"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_marginTop="8dp">
+
+            <ImageButton
+                android:id="@+id/facebook_btn"
+                android:background="@drawable/fbic"
+                android:contentDescription="Open Facebook"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"/>
+
+            <ImageButton
+                android:id="@+id/insta_btn"
+                android:background="@drawable/instic"
+                android:contentDescription="Open Instagram"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"/>
+
+            <ImageButton
+                android:id="@+id/twitter_btn"
+                android:background="@drawable/twitic"
+                android:contentDescription="Open Twitter"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"/>
+
+            <ImageButton
+                android:id="@+id/email_btn"
+                android:background="@drawable/emic"
+                android:contentDescription="Send Email"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,14 +1,13 @@
 package com.example.myapplication;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class VendorLogin extends AppCompatActivity {
+public class NoMarketExploreLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +20,13 @@ public class VendorLogin extends AppCompatActivity {
         log_in_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VendorLogin.this, AddNewEvent.class);
+                Intent intent = new Intent(NoMarketExploreLogin.this, AddNewEvent.class);
                 startActivity(intent);
             }
         });
 
+
+
     }
+
 }

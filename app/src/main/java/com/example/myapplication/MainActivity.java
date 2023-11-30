@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // 创建跳转到 LoginActivity 的 Intent
-                Intent intent = new Intent(MainActivity.this, VendorLogin.class);
+                Intent intent = new Intent(MainActivity.this, NoVendorLogin.class);
                 startActivity(intent);
             }
         });

@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MarketDetailLogin extends AppCompatActivity {
+public class NoMarketDetailLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class MarketDetailLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // 创建跳转到 AddNewStoreActivity 的 Intent
-                Intent intent = new Intent(MarketDetailLogin.this, AddNewStoreActivity.class);
+                Intent intent = new Intent(NoMarketDetailLogin.this, AddNewStoreActivity.class);
                 startActivity(intent);
             }
         });

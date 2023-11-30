@@ -6,12 +6,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class VendorOneSpinner extends ArrayAdapter<String> {
+public class NoVendorOneSpinner extends ArrayAdapter<String> {
     private Context context;
     private String[] values;
     private String title;
 
-    public VendorOneSpinner(Context context, int textViewResourceId, String[] values, String title) {
+    public NoVendorOneSpinner(Context context, int textViewResourceId, String[] values, String title) {
         super(context, textViewResourceId, values);
         this.context = context;
         this.values = values;

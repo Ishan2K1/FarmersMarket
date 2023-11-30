@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MarketExploreLogin extends AppCompatActivity {
+public class NoVendorLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +20,10 @@ public class MarketExploreLogin extends AppCompatActivity {
         log_in_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MarketExploreLogin.this, AddNewEvent.class);
+                Intent intent = new Intent(NoVendorLogin.this, AddNewEvent.class);
                 startActivity(intent);
             }
         });
 
-
-
     }
-
 }

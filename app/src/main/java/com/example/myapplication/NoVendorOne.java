@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -14,9 +13,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.R;
-
-public class VendorOne extends AppCompatActivity {
+public class NoVendorOne extends AppCompatActivity {
     boolean click = true;
     private ImageButton fbBtn;
     private ImageButton instBtn;
@@ -28,7 +25,7 @@ public class VendorOne extends AppCompatActivity {
         if (arrayId != 0) {
             Spinner spinner = findViewById(spinnerId);
             String[] itemsArray = getResources().getStringArray(arrayId);
-            VendorOneSpinner adapter = new VendorOneSpinner(this, android.R.layout.simple_spinner_item, itemsArray, title);
+            NoVendorOneSpinner adapter = new NoVendorOneSpinner(this, android.R.layout.simple_spinner_item, itemsArray, title);
             spinner.setAdapter(adapter);
         }
     }
@@ -76,7 +73,7 @@ public class VendorOne extends AppCompatActivity {
         home_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentHome = new Intent(VendorOne.this, MainActivity.class);
+                Intent intentHome = new Intent(NoVendorOne.this, MainActivity.class);
                 intentHome.putExtra("Activity", "VendorOne");
                 startActivity(intentHome);
             }
@@ -135,7 +132,7 @@ public class VendorOne extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentHome = new Intent(VendorOne.this, MainActivity.class);
+                Intent intentHome = new Intent(NoVendorOne.this, MainActivity.class);
                 startActivity(intentHome);
             }
         });
