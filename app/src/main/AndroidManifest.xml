@@ -40,8 +40,12 @@
             android:label="@string/title_vendorOneSpinner">
             <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
         </activity>
+        <activity android:name=".VendorLogin"
+            android:exported="false"
+            android:label="@string/title_Login">
+        </activity>
         <activity
-            android:name=".VendorLogin"
+            android:name=".MarketExploreLogin"
             android:exported="false"
             android:label="@string/title_log_in"
             android:theme="@style/Theme.MyApplication" />
@@ -51,7 +55,7 @@
             android:label="@string/title_addnewevent"
             android:theme="@style/Theme.MyApplication" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".MarketDetailLogin"
             android:exported="false"
             android:label="@string/title_Login">
         </activity>
@@ -60,7 +64,6 @@
             android:exported="false"
             android:label="@string/title_addnewstore">
         </activity>
-
 
     </application>
 

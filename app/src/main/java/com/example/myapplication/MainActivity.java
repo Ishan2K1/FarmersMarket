@@ -48,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        Button home = findViewById(R.id.homeBtn);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intentHome);
+            }
+        });
     }
 }

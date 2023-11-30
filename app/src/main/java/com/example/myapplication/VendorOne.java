@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication.R;
 
 public class VendorOne extends AppCompatActivity {
     boolean click = true;
@@ -69,6 +72,73 @@ public class VendorOne extends AppCompatActivity {
         emBtn.setOnClickListener(this::onClick);
         gaBtn.setOnClickListener(this::onClick);
 
+        Button home_button= findViewById(R.id.home_btn);
+        home_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(VendorOne.this, MainActivity.class);
+                intentHome.putExtra("Activity", "VendorOne");
+                startActivity(intentHome);
+            }
+        });
+//        profile_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intentHome = new Intent(VendorOne.this, VendorLogin.class);
+//                intentHome.putExtra("Activity", "VendorOne");
+//                startActivity(intentHome);
+//            }
+//        });
+//        Button back_button = (Button) findViewById(R.id.backBtn);
+//        String previousActivity = getIntent().getStringExtra("Activity");
+//        if (previousActivity.equals("MarketDetailActivity")) {
+//            back_button.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent back = new Intent(VendorOne.this, MarketDetailActivity.class);
+//                    startActivity(back);
+//                }
+//            });
+//        } else if (previousActivity.equals("VendorLogIn")) {
+//            back_button.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent back = new Intent(VendorOne.this, VendorLogin.class);
+//                    startActivity(back);
+//                }
+//            });
+//        } else if (previousActivity.equals("VendorOne")) {
+//            back_button.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent back = new Intent(VendorOne.this, VendorOne.class);
+//                    startActivity(back);
+//                }
+//            });
+//        } else {
+//            back_button.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent back = new Intent(VendorOne.this, MainActivity.class);
+//                    startActivity(back);
+//                }
+//            });
+//        }
+        Button backButton = findViewById(R.id.backBtn);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
+        Button home = findViewById(R.id.home_btn);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(VendorOne.this, MainActivity.class);
+                startActivity(intentHome);
+            }
+        });
     }
 
 
@@ -96,5 +166,7 @@ public class VendorOne extends AppCompatActivity {
             Intent chooser3 = Intent.createChooser(intent3, "OPEN WITH");
             startActivity(chooser3);
         }
+
+
     }
 }

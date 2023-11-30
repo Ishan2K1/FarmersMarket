@@ -63,6 +63,23 @@ public class MarketDetailActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button backButton = findViewById(R.id.backBtn);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
+
+        Button home = findViewById(R.id.homeBtn);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentHome = new Intent(MarketDetailActivity.this, MainActivity.class);
+                startActivity(intentHome);
+            }
+        });
     }
 
     private void setCardVisibility(boolean isVisible, CardView... cards) {
@@ -90,4 +107,3 @@ public class MarketDetailActivity extends AppCompatActivity {
         startActivity(intent);
     }
 }
-

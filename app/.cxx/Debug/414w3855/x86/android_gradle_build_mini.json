@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Victor Dircio\\AndroidStudioProjects\\FarmersMarketLY\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\Victor Dircio\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\Victor Dircio\\AndroidStudioProjects\\FarmersMarketLY\\app\\.cxx\\Debug\\414w3855\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\Victor Dircio\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\Victor Dircio\\AndroidStudioProjects\\FarmersMarketLY\\app\\.cxx\\Debug\\414w3855\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "myapplication::@6890427a1f51a3e7e1df": {
+      "artifactName": "myapplication",
+      "abi": "x86",
+      "output": "C:\\Users\\Victor Dircio\\AndroidStudioProjects\\FarmersMarketLY\\app\\build\\intermediates\\cxx\\Debug\\414w3855\\obj\\x86\\libmyapplication.so",
+      "runtimeFiles": []
+    }
+  }
+}
