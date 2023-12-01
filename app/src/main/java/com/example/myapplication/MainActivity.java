@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     List<MarketModel> marketArray = new ArrayList<>(), filteredMarketArray = new ArrayList<>();
     ListAdapter listAdapter;
     GoogleMap map;
+    TextView errmsg;
 
     int distance = 100, time = 100;
 
@@ -52,6 +55,16 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             map.addMarker(new MarkerOptions().position(loc).title(marketModel.getName()));
             map.moveCamera(CameraUpdateFactory.newLatLng(loc));
         }
+        Log.d("marketsize", String.valueOf(markets.size()));
+        if (listAdapter.getItemCount() == 0) {
+            errmsg.setVisibility(View.VISIBLE);
+            Toast.makeText(this, "HELLO", Toast.LENGTH_SHORT).show();
+
+        } else {
+            Toast.makeText(this, "NIYATEE", Toast.LENGTH_SHORT).show();
+            errmsg.setVisibility(View.GONE);
+        }
+        Log.d("endofupdatetmap", "updated");
     }
 
     public String loadJSONFromAsset() {
@@ -82,6 +95,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         marketArray = gson.fromJson(loadJSONFromAsset(), new TypeToken<List<MarketModel>>() {}.getType());
         Log.d("listsize", String.valueOf(marketArray.size()));
         filteredMarketArray.addAll(marketArray);
+
+        // err msg
+        errmsg = findViewById(R.id.errmsg);
 
         // display in recycler view
         marketList = findViewById(R.id.marketlist);
@@ -152,6 +168,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
 
     }
 

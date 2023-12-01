@@ -88,8 +88,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
         protected FilterResults performFiltering(CharSequence constraint) {
             List<MarketModel> filteredMarkets = new ArrayList<>();
 
-
-
             if (constraint == null || constraint.length() == 0) {
                 filteredMarkets.addAll(listFull);
             } else {

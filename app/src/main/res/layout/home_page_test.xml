@@ -46,6 +46,13 @@
             android:layout_height="300dp"
             android:layout_marginTop="27dp" />
 
+        <TextView
+            android:id="@+id/errmsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No markets that fit this criteria"
+            android:visibility="gone" />
+
         <fragment
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
