@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/colorAccent3"
+    android:backgroundTint="@color/colorAccent2">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/begin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:textAlignment="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:layout_marginTop="30dp">
+                    <TextView
+                        android:id="@+id/vendorNameTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:text="Store Name"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="end">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        app:cardCornerRadius="100dp">
+
+                        <ImageButton
+                            android:id="@+id/moreinfo"
+                            android:layout_width="37dp"
+                            android:layout_height="37dp"
+                            android:background="@drawable/iicon"
+                            android:contentDescription="More info"/>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:id="@+id/storeLogo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/mushroom"/>
+            </androidx.cardview.widget.CardView>
+            <!-- Contact Buttons Layout -->
+            <LinearLayout
+                android:id="@+id/linlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/products"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/facebook_btn"
+                    android:background="@drawable/fbic"
+                    android:contentDescription="Open Facebook"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="3dp"/>
+
+                <ImageButton
+                    android:id="@+id/insta_btn"
+                    android:background="@drawable/instic"
+                    android:contentDescription="Open Instagram"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="3dp"/>
+
+                <ImageButton
+                    android:id="@+id/twitter_btn"
+                    android:background="@drawable/twitic"
+                    android:contentDescription="Open Twitter"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="3dp"/>
+
+                <ImageButton
+                    android:id="@+id/email_btn"
+                    android:background="@drawable/emic"
+                    android:contentDescription="Send Email"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_margin="3dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            app:cardCornerRadius="20dp">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/products"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/begin"
+                    android:orientation="vertical"
+                    android:padding="30dp">
+
+                    <!-- ViewPager2 for Pop Products -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Popular Products"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/popViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/storeLogo"
+                        android:layout_marginTop="8dp"/>
+
+
+                    <!-- ViewPager2 for Meats -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meats"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/meatsViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/storeLogo"
+                        android:layout_marginTop="8dp"/>
+
+                    <!-- ViewPager2 for Dairy -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dairy"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/dairyViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/meatsViewPager"
+                        android:layout_marginTop="8dp"/>
+
+                    <!-- ViewPager2 for Vegetables -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vegetables"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/vegetablesViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dairyViewPager"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/homeNav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/colorPrimary"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabCradleVerticalOffset="5dp"
+        app:hideOnScroll="true"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/homeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent2"
+        android:src="@drawable/home_icon"
+        app:layout_anchor="@id/homeNav" />
+
+    <LinearLayout
+        android:id="@+id/topnav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:icon="@drawable/back_icon"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_marginRight="50dp"
+
+            />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:layout_weight="1"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            app:icon="@drawable/profile_icon"
+            style="?android:attr/buttonBarButtonStyle"
+            />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

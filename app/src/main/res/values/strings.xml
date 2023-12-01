@@ -47,4 +47,116 @@
         <item>Ginger | $3/lb</item>
     </array>
 
+    <!-- Luna's Mushroom -->
+    <!-- Pop Products -->
+    <string-array name="lunas_mushroom_pop_products">
+        <item>Mushroom Quiche | $12 | lunas1 | A savory quiche filled with a variety of mushrooms.</item>
+        <item>Mushroom Risotto | $14 | lunas2 | Creamy risotto with rich mushroom flavors.</item>
+        <item>Mushroom Soup | $8 | lunas3 | A comforting soup made with a blend of mushrooms.</item>
+        <item>Mushroom Tart | $10 | lunas4 | A delicious tart featuring mushrooms and cheese.</item>
+    </string-array>
+    <!-- Meats -->
+    <string-array name="lunas_mushroom_meats">
+        <item>Mushroom Meatballs | $7/lb | lunas5 | Juicy meatballs with a hint of mushroom flavor.</item>
+        <item>Mushroom Sausage | $11/lb | lunas6 | Flavorful sausages with a mix of mushrooms and herbs.</item>
+        <item>Mushroom Steak | $15/lb | lunas7 | A hearty mushroom steak, perfect for grilling.</item>
+    </string-array>
+    <!-- Vegetables -->
+    <string-array name="lunas_mushroom_vegetables">
+        <item>Stuffed Mushrooms | $6/piece | lunas8 | Mushrooms stuffed with cheese and herbs.</item>
+        <item>Mushroom Salad | $5/serving | lunas9 | A fresh salad with a variety of mushrooms and greens.</item>
+        <item>Mushroom Curry | $12/serving | lunas10 | A spicy and aromatic mushroom curry.</item>
+    </string-array>
+    <!-- Dairy -->
+    <string-array name="lunas_mushroom_dairy">
+        <item>Mushroom Cheese | $8/piece | lunas11 | Cheese infused with a blend of mushrooms.</item>
+        <item>Mushroom Yogurt | $4/container | lunas12 | Yogurt with a subtle mushroom flavor.</item>
+    </string-array>
+
+
+    <!-- Green Valley Organics -->
+    <!-- Pop Products -->
+    <string-array name="green_valley_organics_pop_products">
+        <item>Organic Veggie Quiche | $15 | green1 | A delicious quiche made with organic vegetables.</item>
+        <item>Organic Jam Trio | $12 | green2 | Three jars of homemade jams made with organic fruits.</item>
+    </string-array>
+    <!-- Meats -->
+    <string-array name="green_valley_organics_meats">
+        <item>Organic Turkey | $8/lb | green3 | A free-range turkey raised organically.</item>
+        <item>Organic Rabbit | $14/lb | green4 | A delicacy, rabbit meat raised organically.</item>
+    </string-array>
+    <!-- Vegetables -->
+    <string-array name="green_valley_organics_vegetables">
+        <item>Organic Beets | $2/lb | green5 | Sweet and earthy beets, grown organically.</item>
+        <item>Organic Eggplant | $5/lb | green6 | Plump and fresh eggplants, organically cultivated.</item>
+    </string-array>
+    <!-- Dairy -->
+    <string-array name="green_valley_organics_dairy">
+        <item>Organic Cream Cheese | $4/pack | green7 | Smooth and creamy cheese made from organic milk.</item>
+    </string-array>
+
+    <!-- Sunny Farm Produce -->
+    <!-- Pop Products -->
+    <string-array name="sunny_farm_produce_pop_products">
+        <item>Farm Honey | $10/jar | sun1 | Natural honey collected from our farms beehives.</item>
+        <item>Pumpkin Pie | $12 | sun2 | Homemade pie made with fresh farm pumpkins.</item>
+    </string-array>
+    <!-- Meats -->
+    <string-array name="sunny_farm_produce_meats">
+        <item>Smoked Bacon | $10/lb | sun3 | Bacon smoked in-house for a rich flavor.</item>
+        <item>Lamb Chops | $12/lb | sun4 | Tender chops from our pasture-raised lambs.</item>
+    </string-array>
+    <!-- Vegetables -->
+    <string-array name="sunny_farm_produce_vegetables">
+        <item>Farm Zucchini | $2/lb | sun5 | Fresh zucchini, perfect for grilling or baking.</item>
+        <item>Cherry Tomatoes | $4/pint | sun6 | Sweet cherry tomatoes, picked fresh from the vine.</item>
+    </string-array>
+    <!-- Dairy -->
+    <string-array name="sunny_farm_produce_dairy">
+        <item>Clotted Cream | $7/pack | sun7 | Thick and creamy clotted cream, a decadent treat.</item>
+        <item>Flavored Yogurt | $4/container | sun8 | Yogurt in various flavors, all made on the farm.</item>
+    </string-array>
+
+
+    <!-- Bloomfield Flower -->
+    <!-- Pop Products -->
+    <string-array name="bloomfield_flowers_pop_products">
+        <item>Floral Infused Honey | $10/jar | f1 | Honey infused with the essence of flowers from our gardens.</item>
+        <item>Aromatherapy Oils | $20/set | f2 | A set of oils extracted from our garden flowers for aromatherapy.</item>
+    </string-array>
+    <!-- Meats -->
+    <string-array name="bloomfield_flowers_meats">
+        <item>Rose Infused Ham | $12/lb | f3 | Ham infused with a subtle rose flavor, unique and delicious.</item>
+        <item>Lavender Flavored Turkey | $9/lb | f4 | Turkey with a hint of lavender, perfect for special occasions.</item>
+    </string-array>
+    <!-- Vegetables -->
+    <string-array name="bloomfield_flowers_vegetables">
+        <item>Edible Chrysanthemums | $5/bunch | f5 | Bright and flavorful chrysanthemums for culinary use.</item>
+    </string-array>
+    <!-- Dairy -->
+    <string-array name="bloomfield_flowers_dairy">
+        <item>Flower Infused Ice Cream | $6/pint | f6 | Ice cream infused with the flavors of various flowers.</item>
+    </string-array>
+
+    <!-- Fresh Diary -->
+    <!-- Pop Products -->
+    <string-array name="fresh_dairy_pop_products">
+        <item>Cheese Fondue | $20 | fresh1 | A rich cheese fondue made with a selection of our finest cheeses.</item>
+        <item>Milkshake | $5 | fresh2 | A creamy and delicious milkshake made with our fresh farm milk.</item>
+    </string-array>
+    <!-- Meats -->
+    <string-array name="fresh_dairy_meats">
+        <item>Herb Infused Lamb | $15/lb | fresh3 | Lamb infused with herbs grown on our dairy farm.</item>
+        <item>Butter-Flavored Beef | $11/lb | fresh4 | Beef with a rich buttery flavor, perfect for steaks and roasts.</item>
+    </string-array>
+    <!-- Vegetables -->
+    <string-array name="fresh_dairy_vegetables">
+        <item>Herbed Potatoes | $4/lb | fresh5 | Potatoes seasoned with herbs from our dairy farm.</item>
+    </string-array>
+    <!-- Dairy -->
+    <string-array name="fresh_dairy_dairy">
+        <item>Farmhouse Ice Cream | $6/pint | fresh6 | Rich and creamy ice cream made with our own dairy products.</item>
+    </string-array>
+
+
 </resources>

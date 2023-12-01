@@ -17,14 +17,22 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> implements Filterable {
-
     Context context;
     List<MarketModel> filteredList;
     List<MarketModel> listFull;
@@ -64,7 +72,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
             public void onClick(View v) {
 //                Toast.makeText(v.getContext(), "My Item position: " + position, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, MarketDetailActivity.class);
-                intent.putExtra("name", filteredList.get(position).getName());
+                intent.putExtra("MarketName", filteredList.get(position).getName());
                 context.startActivity(intent);
             }
         });
@@ -83,9 +91,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
         return filter;
     }
 
+
     private Filter filter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
+
             List<MarketModel> filteredMarkets = new ArrayList<>();
 
             if (constraint == null || constraint.length() == 0) {
@@ -105,6 +115,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
             Log.d("filteredmarkets", filteredMarkets.toString());
             FilterResults results = new FilterResults();
             results.values = filteredMarkets;
+
             return results;
         }
 

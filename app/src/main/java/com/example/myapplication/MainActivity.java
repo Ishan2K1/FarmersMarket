@@ -14,14 +14,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     List<MarketModel> marketArray = new ArrayList<>(), filteredMarketArray = new ArrayList<>();
     ListAdapter listAdapter;
     GoogleMap map;
-    TextView errmsg;
 
     int distance = 100, time = 100;
 
@@ -48,23 +47,15 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         if (map == null) {
             return;
         }
+
         map.clear();
+
         List<MarketModel> markets = listAdapter.getFilteredList();
-        for(MarketModel marketModel: markets) {
+        for (MarketModel marketModel: markets) {
             LatLng loc = new LatLng(marketModel.getLatitude(), marketModel.getLongitude());
             map.addMarker(new MarkerOptions().position(loc).title(marketModel.getName()));
             map.moveCamera(CameraUpdateFactory.newLatLng(loc));
         }
-        Log.d("marketsize", String.valueOf(markets.size()));
-        if (listAdapter.getItemCount() == 0) {
-            errmsg.setVisibility(View.VISIBLE);
-            Toast.makeText(this, "HELLO", Toast.LENGTH_SHORT).show();
-
-        } else {
-            Toast.makeText(this, "NIYATEE", Toast.LENGTH_SHORT).show();
-            errmsg.setVisibility(View.GONE);
-        }
-        Log.d("endofupdatetmap", "updated");
     }
 
     public String loadJSONFromAsset() {
@@ -96,9 +87,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         Log.d("listsize", String.valueOf(marketArray.size()));
         filteredMarketArray.addAll(marketArray);
 
-        // err msg
-        errmsg = findViewById(R.id.errmsg);
-
         // display in recycler view
         marketList = findViewById(R.id.marketlist);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -124,8 +112,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 distance = Integer.valueOf((String) parent.getItemAtPosition(position));
-                listAdapter.getFilter().filter((CharSequence) parent.getItemAtPosition(position)+","+time);
-                updateMap();
+                int prev_size = filteredMarketArray.size();
+                listAdapter.getFilter().filter((CharSequence) parent.getItemAtPosition(position) + "," + time);
+//                updateMap(prev_size);
             }
 
             @Override
@@ -151,16 +140,16 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 time = Integer.valueOf((String) parent.getItemAtPosition(position));
+                int prev_size = filteredMarketArray.size();
                 listAdapter.getFilter().filter(distance + "," + (CharSequence) parent.getItemAtPosition(position));
-                updateMap();
+                filteredMarketArray = listAdapter.getFilteredList();
+//                updateMap(prev_size);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-
-
         });
 
         distanceSpinner.setSelection(7); // hard coded to 100
@@ -169,11 +158,15 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-
     }
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         map = googleMap;
+        for (MarketModel marketModel : marketArray) {
+            LatLng loc = new LatLng(marketModel.latitude, marketModel.longitude);
+            map.addMarker(new MarkerOptions().position(loc).title(marketModel.name));
+            map.moveCamera(CameraUpdateFactory.newLatLng(loc));
+        }
     }
 }

@@ -29,6 +29,10 @@
             android:label="@string/title_marketDetail">
             <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
         </activity>
+        <activity android:name=".NewVendorDetailActivity"
+            android:exported="false"
+            android:label="New Vendor Detail Activity">
+        </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
