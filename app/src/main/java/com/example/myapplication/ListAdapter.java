@@ -73,6 +73,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
 //                Toast.makeText(v.getContext(), "My Item position: " + position, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(context, MarketDetailActivity.class);
                 intent.putExtra("MarketName", filteredList.get(position).getName());
+                intent.putExtra("Address", filteredList.get(position).getAddress());
+                intent.putExtra("Time", String.valueOf(filteredList.get(position).getTime())+" days left");
+                intent.putExtra("Description", filteredList.get(position).getDescription());
                 context.startActivity(intent);
             }
         });

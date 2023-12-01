@@ -16,15 +16,17 @@
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="16dp"
             android:text="Farmer's Market"
+            android:fontFamily="@font/overpass_black"
             android:textSize="24sp" />
 
         <LinearLayout
             android:id="@+id/FilterLO"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="5dp"
             android:orientation="horizontal">
 
             <Spinner
@@ -56,8 +58,8 @@
         <fragment
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
-            android:layout_width="395dp"
-            android:layout_height="232dp"
+            android:layout_width="412dp"
+            android:layout_height="280dp"
             tools:context=".MapsActivity" />
     </LinearLayout>
 
@@ -172,7 +174,65 @@
         <!--            android:layout_marginEnd="8dp"-->
         <!--            android:layout_marginBottom="45dp"-->
         <!--            android:text="Add new Market" />-->
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/homeNav"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/topnav"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:fabCradleRoundedCornerRadius="20dp"
+            app:fabCradleVerticalOffset="5dp"
+            app:hideOnScroll="true" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/homeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/homeNav"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="160dp"
+            android:layout_marginBottom="-18dp"
+            android:backgroundTint="@color/colorAccent2"
+            android:gravity="center_horizontal"
+            android:src="@drawable/home_icon"
+            app:layout_anchor="@id/homeNav" />
+
+        <LinearLayout
+            android:id="@+id/topnav"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:id="@+id/backBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:icon="@drawable/back_icon"
+                android:gravity="center"
+                app:iconGravity="textStart"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_marginRight="50dp"
+
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:iconGravity="textStart"
+                app:icon="@drawable/profile_icon"
+                style="?android:attr/buttonBarButtonStyle"
+                />
+        </LinearLayout>
     </RelativeLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,6 +23,18 @@ public class MarketDetailActivity extends AppCompatActivity {
         TextView marketNameTextView = findViewById(R.id.marketName);
         marketNameTextView.setText(marketName);
 
+        String marketLocation = getIntent().getStringExtra("Address");
+        TextView marketLocationTextView = findViewById(R.id.location);
+        marketLocationTextView.setText(marketLocation);
+
+        String marketTime = getIntent().getStringExtra("Time");
+        TextView marketTimeTextView = findViewById(R.id.date);
+        marketTimeTextView.setText(marketTime);
+
+        String marketDesc = getIntent().getStringExtra("Description");
+        TextView marketDescTextView = findViewById(R.id.description);
+        marketDescTextView.setText(marketDesc);
+
         // 获取供应商卡片视图
         CardView vendorCard1 = findViewById(R.id.vendorCard1);
         CardView vendorCard2 = findViewById(R.id.vendorCard2);
