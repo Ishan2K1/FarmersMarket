@@ -1,0 +1,174 @@
+<resources>
+    <string name="app_name">FarmersMarket</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_add_event">add_event</string>
+    <string name="title_return">Return</string>
+    <string name="title_profile">Profile</string>
+    <string name="title">title_return</string>
+    <string name="title_marketDetail">Market Detail</string>
+    <string name="title_vendorDetail">Vendor Detail</string>
+    <string name="title_vendorOneSpinner">Vendor Spinner</string>
+    <string name="title_Login">Log In</string>
+    <string name="title_addnewstore">Add a New Store</string>
+    <string name="title_log_in">Log in </string>
+    <string name="title_addnewevent">Add a new Event </string>
+    <string name="title_new_vendorDetail">Add a new Event </string>
+    <dimen name="item_margin">1dp</dimen>
+
+    <!-- Luna's Mushroom -->
+    <!-- Pop Products -->
+    <string-array name="lunas_mushroom_pop_products">
+        <item>Mushroom Quiche | $12 | mushroom | A savory quiche filled with a variety of mushrooms.</item>
+        <item>Mushroom Risotto | $14 | mushroom | Creamy risotto with rich mushroom flavors.</item>
+        <item>Mushroom Soup | $8 | mushroom | A comforting soup made with a blend of mushrooms.</item>
+        <item>Mushroom Tart | $10 | mushroom | A delicious tart featuring mushrooms and cheese.</item>
+    </string-array>
+    <!-- Meats -->
+    <string-array name="lunas_mushroom_meats">
+        <item>Mushroom Meatballs | $7/lb | mushroom | Juicy meatballs with a hint of mushroom flavor.</item>
+        <item>Mushroom Patty | $9/lb | mushroom | A vegetarian patty made from mushrooms and spices.</item>
+        <item>Mushroom Sausage | $11/lb | mushroom | Flavorful sausages with a mix of mushrooms and herbs.</item>
+        <item>Mushroom Steak | $15/lb | mushroom | A hearty mushroom steak, perfect for grilling.</item>
+    </string-array>
+    <!-- Vegetables -->
+    <string-array name="lunas_mushroom_vegetables">
+        <item>Stuffed Mushrooms | $6/piece | mushroom | Mushrooms stuffed with cheese and herbs.</item>
+        <item>Mushroom Salad | $5/serving | mushroom | A fresh salad with a variety of mushrooms and greens.</item>
+        <item>Mushroom Stir Fry | $10/serving | mushroom | A stir-fry dish featuring mushrooms and vegetables.</item>
+        <item>Mushroom Curry | $12/serving | mushroom | A spicy and aromatic mushroom curry.</item>
+    </string-array>
+    <!-- Dairy -->
+    <string-array name="lunas_mushroom_dairy">
+        <item>Mushroom Cheese | $8/piece | mushroom | Cheese infused with a blend of mushrooms.</item>
+        <item>Mushroom Yogurt | $4/container | mushroom | Yogurt with a subtle mushroom flavor.</item>
+        <item>Mushroom Cream | $7/pack | mushroom | A rich cream with mushroom essence.</item>
+        <item>Mushroom Butter | $5/pack | mushroom | Butter with a mild mushroom flavor.</item>
+    </string-array>
+
+
+    <!-- Green Valley Organics -->
+    <!-- Pop Products -->
+    <string-array name="green_valley_organics_pop_products">
+        <item>Organic Herb Salad | $6 | mushroom | A fresh and flavorful salad made with organic herbs.</item>
+        <item>Organic Fruit Basket | $20 | mushroom | A basket filled with a variety of fresh, organic fruits.</item>
+        <item>Organic Veggie Quiche | $15 | mushroom | A delicious quiche made with organic vegetables.</item>
+        <item>Organic Jam Trio | $12 | mushroom | Three jars of homemade jams made with organic fruits.</item>
+    </string-array>
+    <!-- Meats -->
+    <string-array name="green_valley_organics_meats">
+        <item>Organic Turkey | $8/lb | mushroom | A free-range turkey raised organically.</item>
+        <item>Organic Venison | $10/lb | mushroom | Lean and flavorful venison from organically fed deer.</item>
+        <item>Organic Duck | $12/lb | mushroom | Rich and tender duck meat, organically raised.</item>
+        <item>Organic Rabbit | $14/lb | mushroom | A delicacy, rabbit meat raised organically.</item>
+    </string-array>
+    <!-- Vegetables -->
+    <string-array name="green_valley_organics_vegetables">
+        <item>Organic Beets | $2/lb | mushroom | Sweet and earthy beets, grown organically.</item>
+        <item>Organic Kale | $3/bunch | mushroom | Nutrient-rich kale, perfect for salads and smoothies.</item>
+        <item>Organic Squash | $4/lb | mushroom | A variety of organic squash, great for roasting.</item>
+        <item>Organic Eggplant | $5/lb | mushroom | Plump and fresh eggplants, organically cultivated.</item>
+    </string-array>
+    <!-- Dairy -->
+    <string-array name="green_valley_organics_dairy">
+        <item>Organic Cream Cheese | $4/pack | mushroom | Smooth and creamy cheese made from organic milk.</item>
+        <item>Organic Sour Cream | $3/pack | mushroom | Rich and tangy sour cream, organically produced.</item>
+        <item>Organic Cottage Cheese | $5/container | mushroom | Fresh and light cottage cheese, made organically.</item>
+        <item>Organic Kefir | $4/bottle | mushroom | A probiotic-rich kefir made with organic milk.</item>
+    </string-array>
+
+    <!-- Sunny Farm Produce -->
+    <!-- Pop Products -->
+    <string-array name="sunny_farm_produce_pop_products">
+        <item>Farm Honey | $10/jar | mushroom | Natural honey collected from our farms beehives.</item>
+        <item>Pumpkin Pie | $12 | mushroom | Homemade pie made with fresh farm pumpkins.</item>
+        <item>Herb-Infused Olive Oil | $15/bottle | mushroom | Olive oil infused with herbs grown on our farm.</item>
+        <item>Farm Fresh Salsa | $8/jar | mushroom | A spicy and fresh salsa made with farm-grown ingredients.</item>
+    </string-array>
+    <!-- Meats -->
+    <string-array name="sunny_farm_produce_meats">
+        <item>Smoked Bacon | $10/lb | mushroom | Bacon smoked in-house for a rich flavor.</item>
+        <item>Country Sausage | $6/lb | mushroom | Sausage made with farm-raised pork and a blend of spices.</item>
+        <item>Beef Jerky | $15/pack | mushroom | Homemade jerky made from our grass-fed beef.</item>
+        <item>Lamb Chops | $12/lb | mushroom | Tender chops from our pasture-raised lambs.</item>
+    </string-array>
+    <!-- Vegetables -->
+    <string-array name="sunny_farm_produce_vegetables">
+        <item>Farm Zucchini | $2/lb | mushroom | Fresh zucchini, perfect for grilling or baking.</item>
+        <item>Cherry Tomatoes | $4/pint | mushroom | Sweet cherry tomatoes, picked fresh from the vine.</item>
+        <item>Sweet Peas | $3/lb | mushroom | Fresh and sweet peas, picked at the peak of ripeness.</item>
+        <item>Cucumber | $1/each | mushroom | Crisp and refreshing cucumbers, ideal for salads.</item>
+    </string-array>
+    <!-- Dairy -->
+    <string-array name="sunny_farm_produce_dairy">
+        <item>Buttermilk | $3/quart | mushroom | Rich and tangy buttermilk, great for baking.</item>
+        <item>Farm Cheese | $6/lb | mushroom | Cheese made from the milk of our farm cows.</item>
+        <item>Clotted Cream | $7/pack | mushroom | Thick and creamy clotted cream, a decadent treat.</item>
+        <item>Flavored Yogurt | $4/container | mushroom | Yogurt in various flavors, all made on the farm.</item>
+    </string-array>
+
+
+    <!-- Bloomfield Flower -->
+    <!-- Pop Products -->
+    <string-array name="bloomfield_flowers_pop_products">
+        <item>Floral Infused Honey | $10/jar | mushroom | Honey infused with the essence of flowers from our gardens.</item>
+        <item>Floral Jelly | $7/jar | mushroom | A delicate jelly made from a variety of floral nectars.</item>
+        <item>Aromatherapy Oils | $20/set | mushroom | A set of oils extracted from our garden flowers for aromatherapy.</item>
+        <item>Flower Essence Tinctures | $15/bottle | mushroom | Tinctures made from the essences of our unique flowers.</item>
+    </string-array>
+    <!-- Meats -->
+    <string-array name="bloomfield_flowers_meats">
+        <item>Rose Infused Ham | $12/lb | mushroom | Ham infused with a subtle rose flavor, unique and delicious.</item>
+        <item>Lavender Flavored Turkey | $9/lb | mushroom | Turkey with a hint of lavender, perfect for special occasions.</item>
+        <item>Herbal Chicken | $8/lb | mushroom | Chicken seasoned with a blend of herbs and edible flowers.</item>
+        <item>Floral Beef Roast | $14/lb | mushroom | Beef roast with a floral rub, creating a unique flavor profile.</item>
+    </string-array>
+    <!-- Vegetables -->
+    <string-array name="bloomfield_flowers_vegetables">
+        <item>Edible Chrysanthemums | $5/bunch | mushroom | Bright and flavorful chrysanthemums for culinary use.</item>
+        <item>Flower Sprouts | $4/pack | mushroom | A mix of sprouts from various edible flowers, fresh and nutritious.</item>
+        <item>Floral Salad Mix | $6/bag | mushroom | A salad mix that includes edible flowers for a burst of color and flavor.</item>
+        <item>Herb and Flower Blend | $5/pack | mushroom | A blend of culinary herbs and edible flowers, great for seasoning.</item>
+    </string-array>
+    <!-- Dairy -->
+    <string-array name="bloomfield_flowers_dairy">
+        <item>Flower Infused Ice Cream | $6/pint | mushroom | Ice cream infused with the flavors of various flowers.</item>
+        <item>Floral Cream Cheese Spread | $5/pack | mushroom | Cream cheese spread with a mixture of edible flower petals.</item>
+        <item>Herb and Flower Yogurt | $4/container | mushroom | Yogurt mixed with edible flowers and herbs, a delightful treat.</item>
+        <item>Floral Whipped Cream | $6/can | mushroom | Light and airy whipped cream with a hint of floral essence.</item>
+    </string-array>
+
+    <!-- Fresh Diary -->
+    <!-- Pop Products -->
+    <string-array name="fresh_dairy_pop_products">
+        <item>Farm Fresh Quiche | $12 | mushroom | A delightful quiche made with ingredients straight from our farm.</item>
+        <item>Yogurt Smoothie | $7 | mushroom | A refreshing smoothie made with our homemade yogurt and fresh fruits.</item>
+        <item>Cheese Fondue | $20 | mushroom | A rich cheese fondue made with a selection of our finest cheeses.</item>
+        <item>Milkshake | $5 | mushroom | A creamy and delicious milkshake made with our fresh farm milk.</item>
+    </string-array>
+    <!-- Meats -->
+    <string-array name="fresh_dairy_meats">
+        <item>Herb Infused Lamb | $15/lb | mushroom | Lamb infused with herbs grown on our dairy farm.</item>
+        <item>Butter-Flavored Beef | $11/lb | mushroom | Beef with a rich buttery flavor, perfect for steaks and roasts.</item>
+        <item>Dairy Fed Pork | $10/lb | mushroom | Pork raised on our dairy products for a unique taste.</item>
+        <item>Spiced Duck | $13/lb | mushroom | Duck seasoned with a blend of spices and herbs from our farm.</item>
+    </string-array>
+    <!-- Vegetables -->
+    <string-array name="fresh_dairy_vegetables">
+        <item>Cheese-Stuffed Peppers | $6/pack | mushroom | Peppers stuffed with our homemade cheese, a perfect appetizer.</item>
+        <item>Yogurt-Dressed Salad | $7/serving | mushroom | A fresh salad dressed with our tangy yogurt dressing.</item>
+        <item>Herbed Potatoes | $4/lb | mushroom | Potatoes seasoned with herbs from our dairy farm.</item>
+        <item>Creamed Asparagus | $8/bunch | mushroom | Asparagus in a rich cream sauce, made with our fresh cream.</item>
+    </string-array>
+    <!-- Dairy -->
+    <string-array name="fresh_dairy_dairy">
+        <item>Flavored Butter | $5/pack | mushroom | Butter flavored with natural herbs and spices from our farm.</item>
+        <item>Gourmet Cheese Spread | $7/pack | mushroom | A spreadable cheese blend made with our artisan cheeses.</item>
+        <item>Whipped Yogurt | $4/container | mushroom | Light and fluffy yogurt, whipped for a smooth texture.</item>
+        <item>Farmhouse Ice Cream | $6/pint | mushroom | Rich and creamy ice cream made with our own dairy products.</item>
+    </string-array>
+
+
+
+</resources>

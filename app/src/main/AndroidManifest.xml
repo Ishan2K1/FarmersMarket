@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MarketDetailActivity"
+            android:exported="false"
+            android:label="@string/title_marketDetail">
+            <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
+        </activity>
+        <activity
+            android:name=".NoVendorOne"
+            android:exported="false"
+            android:label="@string/title_vendorDetail">
+            <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
+        </activity>
+        <activity
+            android:name=".NoVendorOneSpinner"
+            android:exported="false"
+            android:label="@string/title_vendorOneSpinner">
+            <!-- 在这里添加任何特定的 intent 过滤器或配置 -->
+        </activity>
+        <activity android:name=".NoVendorLogin"
+            android:exported="false"
+            android:label="@string/title_Login">
+        </activity>
+        <activity
+            android:name=".NoMarketExploreLogin"
+            android:exported="false"
+            android:label="@string/title_log_in"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".AddNewEvent"
+            android:exported="false"
+            android:label="@string/title_addnewevent"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".NoMarketDetailLogin"
+            android:exported="false"
+            android:label="@string/title_Login">
+        </activity>
+        <activity
+            android:name=".AddNewStoreActivity"
+            android:exported="false"
+            android:label="@string/title_addnewstore">
+        </activity>
+        <activity
+            android:name=".NewVendorDetailActivity"
+            android:exported="false"
+            android:label="@string/title_new_vendorDetail">
+        </activity>
+        <activity
+            android:name=".MarginItemDecoration"
+            android:exported="false"
+            android:label="@string/title_new_vendorDetail">
+        </activity>
+
+    </application>
+
+</manifest>

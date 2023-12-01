@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/colorPrimary">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="lopraofanasdf adfnsodfno ehwerhwofso fosf sodif nosdn osid isognosdgn osign oisdgn oisng oisn gdoisng osing oisng oisngoisndgosnd oisd goisnd osinf oisng oisngd "
+            android:textSize="15dp"
+            android:layout_marginTop="30dp"/>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
