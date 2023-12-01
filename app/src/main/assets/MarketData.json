@@ -9,7 +9,8 @@
     "email": "info@champaignmarket.com",
     "phone": "+1 217-555-0100",
     "latitude": 40.1164,
-    "longitude": -88.2434
+    "longitude": -88.2434,
+    "image": "champaignfarmersmarket"
   },
   {
     "id": "2",
@@ -21,7 +22,8 @@
     "email": "contact@chicagofarmersmarket.com",
     "phone": "+1 312-555-0200",
     "latitude": 41.8838,
-    "longitude": -87.6318
+    "longitude": -87.6318,
+    "image": "chicagofarmersmarket"
   },
   {
     "id": "3",
@@ -33,7 +35,8 @@
     "email": "springfieldorganic@market.com",
     "phone": "+1 217-555-0300",
     "latitude": 39.7982,
-    "longitude": -89.6543
+    "longitude": -89.6543,
+    "image": "springfieldorganicfarmersmarket"
   },
   {
     "id": "4",
@@ -45,7 +48,8 @@
     "email": "urbanamarket@local.com",
     "phone": "+1 217-555-0400",
     "latitude": 40.1106,
-    "longitude": -88.2042
+    "longitude": -88.2042,
+    "image": "urbanafarmersmarket"
   },
   {
     "id": "5",
@@ -57,7 +61,8 @@
     "email": "fresh@decaturmarket.com",
     "phone": "+1 217-555-0500",
     "latitude": 39.8403,
-    "longitude": -88.9548
+    "longitude": -88.9548,
+    "image": "springfieldorganicfarmersmarket"
   }
 ]
 

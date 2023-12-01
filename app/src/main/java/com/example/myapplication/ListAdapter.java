@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -62,7 +63,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> im
 
     @Override
     public void onBindViewHolder(@NonNull ListAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        holder.image.setImageResource(filteredList.get(position).getImage());
+        holder.image.setImageResource(context.getResources().getIdentifier(filteredList.get(position).getImage(), "drawable", context.getPackageName()));
         holder.name.setText(filteredList.get(position).getName());
         holder.distance.setText(filteredList.get(position).getDistance() + " miles");
         holder.date.setText(filteredList.get(position).getTime() + " days from now");

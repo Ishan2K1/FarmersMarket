@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 distance = Integer.valueOf((String) parent.getItemAtPosition(position));
                 int prev_size = filteredMarketArray.size();
                 listAdapter.getFilter().filter((CharSequence) parent.getItemAtPosition(position) + "," + time);
-//                updateMap(prev_size);
+                updateMap();
             }
 
             @Override
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 int prev_size = filteredMarketArray.size();
                 listAdapter.getFilter().filter(distance + "," + (CharSequence) parent.getItemAtPosition(position));
                 filteredMarketArray = listAdapter.getFilteredList();
-//                updateMap(prev_size);
+                updateMap();
             }
 
             @Override

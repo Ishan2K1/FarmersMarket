@@ -8,6 +8,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.myapplication.adapters.ProductAdapter;
 import com.example.myapplication.models.Product;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +59,21 @@ public class NewVendorDetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 dialog.setContentView(R.layout.popup);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            }
+        });
+
+        Button backButton = findViewById(R.id.backBtn);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
+        FloatingActionButton home = findViewById(R.id.homeBtn);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override             public void onClick(View view) {
+                Intent intentHome = new Intent(NewVendorDetailActivity.this, MainActivity.class);
+                startActivity(intentHome);
             }
         });
 

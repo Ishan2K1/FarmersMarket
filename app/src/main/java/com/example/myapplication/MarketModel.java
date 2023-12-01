@@ -1,7 +1,7 @@
 package com.example.myapplication;
 
 public class MarketModel {
-    int image;
+    String image;
     String name;
     double latitude;
     double longitude;
@@ -13,7 +13,7 @@ public class MarketModel {
     String email;
     String phone;
 
-    public MarketModel(int image, String name, double latitude, double longitude, int id, int distance, int time, String address, String description, String email, String phone) {
+    public MarketModel(String image, String name, double latitude, double longitude, int id, int distance, int time, String address, String description, String email, String phone) {
         this.image = image;
         this.name = name;
         this.latitude = latitude;
@@ -27,11 +27,11 @@ public class MarketModel {
         this.phone = phone;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
