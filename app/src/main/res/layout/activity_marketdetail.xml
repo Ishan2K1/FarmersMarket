@@ -52,7 +52,7 @@
                             android:id="@+id/myImageView"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/mushroom" />
+                            android:src="@drawable/champaignfarmersmarket" />
 
                     </androidx.cardview.widget.CardView>
 

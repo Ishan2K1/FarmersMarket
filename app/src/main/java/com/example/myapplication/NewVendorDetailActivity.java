@@ -47,7 +47,7 @@ public class NewVendorDetailActivity extends AppCompatActivity {
         }
 
         // Set up ViewPager2 and Adaptor
-        setupViewPager(R.id.popViewPager, meatsArrayId);
+        setupViewPager(R.id.popViewPager, popArrayId);
         setupViewPager(R.id.meatsViewPager, meatsArrayId);
         setupViewPager(R.id.dairyViewPager, dairyArrayId);
         setupViewPager(R.id.vegetablesViewPager, vegetablesArrayId);
