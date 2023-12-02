@@ -54,11 +54,20 @@ public class NewVendorDetailActivity extends AppCompatActivity {
 
         ImageButton imageButton = findViewById(R.id.moreinfo);
         Dialog dialog = new Dialog(this);
+        /*
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialog.setContentView(R.layout.popup);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            }
+        });
+
+         */
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialog();
             }
         });
 
@@ -77,6 +86,13 @@ public class NewVendorDetailActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void showDialog() {
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.popup);
+        dialog.show();
+        dialog.setCanceledOnTouchOutside(true);
     }
 
     private void setupViewPager(int viewPagerId, int arrayResId) {
@@ -111,4 +127,6 @@ public class NewVendorDetailActivity extends AppCompatActivity {
         }
         return productList;
     }
+
+
 }

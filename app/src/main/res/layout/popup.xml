@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="lopraofanasdf adfnsodfno ehwerhwofso fosf sodif nosdn osid isognosdgn osign oisdgn oisng oisn gdoisng osing oisng oisngoisndgosnd oisd goisnd osinf oisng oisngd "
+            android:text="Experience the vibrant tapestry of local flavors and artisanal crafts at our bustling farmers market. Stroll through stalls adorned with freshly harvested produce, aromatic herbs, and handmade treasures, connecting with the community and savoring the essence of seasonal abundance."
             android:textSize="15dp"
             android:layout_marginTop="30dp"/>
     </androidx.cardview.widget.CardView>
